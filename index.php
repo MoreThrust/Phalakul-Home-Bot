@@ -76,51 +76,46 @@ if ($message->{"text"} == 'แสงสว่าง') {
         'altText' => 'Flex Message',
         'contents' => [
             'type' => 'bubble',
+            'direction' => 'ltr',
             'header' => [
                 'type' => 'box',
-                'layout' => 'horizontal',
+                'layout' => 'vertical',
                 'contents' => [
                     [
                         'type' => 'text',
-                        'text' => 'NEWS DIGEST',
-                        'size' => 'sm',
-                        'weight' => 'bold',
-                        'color' => '#AAAAAA'
+                        'text' => 'Header',
+                        'align' => 'center'
                     ]
                 ]
             ],
             'hero' => [
                 'type' => 'image',
-                'url' => 'https=>//scdn.line-apps.com/n/channel_devcenter/img/fx/01_4_news.png',
+                'url' => 'https=>//developers.line.biz/assets/images/services/bot-designer-icon.png',
                 'size' => 'full',
-                'aspectRatio' => '20=>13',
-                'aspectMode' => 'cover',
-                'action' => [
-                    'type' => 'uri',
-                    'label' => 'Action',
-                    'uri' => 'https=>//linecorp.com/'
-                ]
+                'aspectRatio' => '1.51=>1',
+                'aspectMode' => 'fit'
             ],
             'body' => [
                 'type' => 'box',
-                'layout' => 'horizontal',
-                'spacing' => 'md',
+                'layout' => 'vertical',
                 'contents' => [
                     [
-                        'type' => 'box',
-                        'layout' => 'vertical',
-                        'flex' => '2',
-                        'contents' => [
-                            [
-                                'type' => 'text',
-                                'text' => '7 Things to Know for Today',
-                                'flex' => '1',
-                                'size' => 'xs',
-                                'gravity' => 'top'
-                            ],
-                            [
-                                'type' => 'separator'
-                            ]
+                        'type' => 'text',
+                        'text' => 'Body',
+                        'align' => 'center'
+                    ]
+                ]
+            ],
+            'footer' => [
+                'type' => 'box',
+                'layout' => 'horizontal',
+                'contents' => [
+                    [
+                        'type' => 'button',
+                        'action' => [
+                            'type' => 'uri',
+                            'label' => 'Button',
+                            'uri' => 'https=>//linecorp.com'
                         ]
                     ]
                 ]
