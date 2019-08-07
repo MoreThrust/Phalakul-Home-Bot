@@ -24,12 +24,12 @@ if ($message->{"text"} == 'วิธีใช้') {
             'actions' => [
                 [
                     'type' => 'message',
-                    'label' => "แผงควบคุม",
+                    'label' => 'แผงควบคุม',
                     'text' => 'แผงควบคุม'
                 ],
                 [
                     'type' => 'message',
-                    'label' => "เช็คสถานะ",
+                    'label' => 'เช็คสถานะ',
                     'text' => 'เช็คสถานะ'
                 ]
             ]
