@@ -44,10 +44,10 @@ if ($message->{"text"} == 'วิธีใช้') {
 if ($message->{"text"} == 'แผงควบคุม') {
     $messageData = [
         'type' => 'template',
-        'altText' => 'วิธีใช้งาน',
+        'altText' => 'แผงควบคุม',
         'template' => [
             'type' => 'buttons',
-            'title' => 'วิธีใช้งาน',
+            'title' => 'แผงควบคุม',
             'text' => 'เลือกเมนูด้านล่างตามที่ต้องการ',
             'actions' => [
                 [
