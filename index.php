@@ -16,7 +16,7 @@ $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 if ($message->{"text"} == 'วิธีใช้') {
     $messageData = [
         'type' => 'template',
-        'altText' => 'วิธีใช้',
+        'altText' => 'วิธีใช้งาน',
         'template' => [
             'type' => 'buttons',
             'title' => 'วิธีใช้งาน',
