@@ -109,12 +109,12 @@ if ($message->{"text"} == 'แสงสว่าง') {
                     [
                         'type' => 'box',
                         'layout' => 'vertical',
-                        'flex' => 2,
+                        'flex' => '2',
                         'contents' => [
                             [
                                 'type' => 'text',
                                 'text' => '7 Things to Know for Today',
-                                'flex' => 1,
+                                'flex' => '1',
                                 'size' => 'xs',
                                 'gravity' => 'top'
                             ],
