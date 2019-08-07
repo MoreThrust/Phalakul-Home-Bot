@@ -47,6 +47,34 @@ if ($message->{"text"} == 'แสงสว่าง') {
     ];
 } 
 
+
+
+if ($message->{"text"} == 'วิธีใช้') {
+    $messageData = [
+        'type' => 'template',
+        'altText' => 'ระบบแสงสว่าง',
+        'template' => [
+            'type' => 'buttons',
+            'title' => 'วิธีใช้งาน',
+            'text' => '1.พิมพ์ว่าแผงควบคุม หรือ ocp',
+            'actions' => [
+                [
+                    'type' => 'message',
+                    'label' => "แผงควบคุม",
+                    'text' => 'ocp'
+                ],
+                [
+                    'type' => 'message',
+                    'label' => "เช็คสถานะเช็คสถานะ",
+                    'text' => 'ost'
+                ]
+            ]
+        ]
+    ];
+} 
+
+
+
 // ==================== Set RT ==================== //
 elseif($message->{"text"} == 'แสงสว่างห้องรับแขก') {
     $messageData = [
@@ -103,7 +131,7 @@ elseif($message->{"text"} == 'แสงสว่างห้องรับแ�
 if ($message->{"text"} == 'สถานะ') {
     $messageData = [
         "type" => "text",
-        "text" => "􀔃􀄒novice􏿿 สถานะโดยรวม\n􁤁􀆅energy saving bulb􏿿 สถานะ\n- ".$st_lamp_rt.$st_lamp_rt2."\n- ".$st_lamp_ws.$st_lamp_ws2."\n- ".$st_lamp_mt.$st_lamp_mt2."\n\n
+        "text" => "􀔃􀄒novice􏿿 สถานะโดยรวม\n􁤁􀆅energy saving bulb􏿿 สถานะอุปกรณ์\n- ".$st_lamp_rt.$st_lamp_rt2."\n- ".$st_lamp_ws.$st_lamp_ws2."\n- ".$st_lamp_mt.$st_lamp_mt2."\n\n
         􀌂􀇨snowy􏿿 เครื่องทำความเย็น\n- ".$st_air_rt.$st_air_rt2."\n- ".$st_air_ws.$st_air_ws2."\n- ".$st_air_mt.$st_air_mt2."\n\n
         􁤁􀆣อุณหภูมิ􏿿 อุณหภูมิห้อง\n- ".$temp_air_rt.$temp_air_rt2."\n- ".$temp_air_ws.$temp_air_ws2."\n- ".$temp_air_mt.$temp_air_mt2."\n\n
         􀐂􀇚กุญแจ􏿿 ระบบความปลอดภัย\n- ".$st_door_et.$st_door_et2."\n- ".$st_door_ws.$st_door_ws2."\n- ".$st_door_mt.$st_door_mt2."\n"
