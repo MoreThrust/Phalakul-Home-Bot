@@ -1,7 +1,7 @@
 <?php
 include("Status.php");
 //include("set_anto.php");
-
+echo "Ok";
 $accessToken = '0o0ysAsM9n8ogghDWIpHI7Hes2cIhXyaES1Hu5QA1GoJFpoF3/oR3QHHO8CJ41G1XzU2HLh7fYPXFNfUF5vHnTMHfzvVvV5bmjY8sYQAMEr6dt3JE6A0Oz8Iync6wKjk+VO3OvdvsQSOu6TSu8liQwdB04t89/1O/w1cDnyilFU=';
 
 $jsonString = file_get_contents('php://input');
