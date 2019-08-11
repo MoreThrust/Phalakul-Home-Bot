@@ -15,9 +15,7 @@ if ( sizeof($request_array['events']) > 0 ) {
         $text = $event['message']['text'];
         $data = [
             'replyToken' => $reply_token,
-            'messages' => [
-                
-                    "type" => "flex",
+            'messages' => ["type" => "flex",
                     "altText" => "Hello Flex Message",
                     "contents" => [
                       "type" => "bubble",
@@ -133,8 +131,6 @@ if ( sizeof($request_array['events']) > 0 ) {
                         ]
                       ]
                     ]
-                  
-
             ]
         ];
         $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
