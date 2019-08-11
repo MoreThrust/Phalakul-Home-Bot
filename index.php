@@ -88,13 +88,6 @@ if ($message->{"text"} == 'แสงสว่าง') {
                     ]
                 ]
             ],
-            'hero' => [
-                'type' => 'image',
-                'url' => 'https=>//developers.line.biz/assets/images/services/bot-designer-icon.png',
-                'size' => 'full',
-                'aspectRatio' => '1.51=>1',
-                'aspectMode' => 'fit'
-            ],
             'body' => [
                 'type' => 'box',
                 'layout' => 'vertical',
