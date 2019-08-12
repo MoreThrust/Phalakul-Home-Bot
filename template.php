@@ -125,7 +125,6 @@ $jsonFlex = [
 
 
 
-
 $jsonFlex2 = [
     "type" => "flex",
     "altText" => "Flex Message",
@@ -160,7 +159,7 @@ $jsonFlex2 = [
                 ],
                 [
                     "type" => "text",
-                    "text" => "2019.02.14 21 =>47 (GMT+0700)",
+                    "text" => "2019.02.14 21:47 (GMT+0700)",
                     "size" => "xs",
                     "color" => "#B2B2B2"
                 ],
@@ -237,7 +236,7 @@ $jsonFlex2 = [
                     "action" => [
                         "type" => "uri",
                         "label" => "View Details",
-                        "uri" => "https =>//google.co.th/"
+                        "uri" => "https://google.co.th/"
                     ]
                 ]
             ]
