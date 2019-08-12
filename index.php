@@ -7,7 +7,7 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 $message = $request_array->{"events"}[0]->{"message"};
 
-echo $request_array;
+echo $request_array/n;
 
 $jsonFlex = [
     "type" => "flex",
