@@ -73,27 +73,31 @@ $js_ST = [
                             "contents" => [
                                 [
                                     "type" => "text",
-                                    "text" => "223v",
+                                    "text" => "223.4v",
                                     "size" => "lg",
-                                    "weight" => "bold"
+                                    "weight" => "bold",
+                                    "color" => "#F1C40F"
                                 ],
                                 [
                                     "type" => "text",
                                     "text" => "ไม่พบ",
                                     "size" => "lg",
-                                    "weight" => "bold"
+                                    "weight" => "bold",
+                                    "color" => "#2ECC71"
                                 ],
                                 [
                                     "type" => "text",
                                     "text" => "29.7°C",
                                     "size" => "lg",
-                                    "weight" => "bold"
+                                    "weight" => "bold",
+                                    "color" => "#1ABC9C"
                                 ],
                                 [
                                     "type" => "text",
-                                    "text" => "45%",
+                                    "text" => "45.5%",
                                     "size" => "lg",
-                                    "weight" => "bold"
+                                    "weight" => "bold",
+                                    "color" => "#3498DB"
                                 ]
                             ]
                         ]
