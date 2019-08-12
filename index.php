@@ -18,14 +18,14 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'สถานะ') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [$jsonFlex]
+                'messages' => [$js_CPN]
             ];
         }
 
         if ($text == 'แสงสว่าง') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [$jsonFlex2]
+                'messages' => [$jsonFlex]
             ];
         }
         //========================================== จบแสงสว่าง ==========================================//
