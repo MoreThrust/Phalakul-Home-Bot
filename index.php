@@ -5,6 +5,7 @@ $channelSecret = 'af6aadbace7145526e4d024d7b605bb5';
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
+$message = $jsonObj->{"events"}[0]->{"message"};
 
 $jsonFlex = [
     "type" => "flex",
@@ -125,7 +126,7 @@ $jsonFlex = [
     ]
   ];
 
-if ( sizeof($request_array['message']) == 'แสงสว่าง' ) {
+if ($message == 'แสงสว่าง' ) {
     foreach ($request_array['events'] as $event) {
         $reply_message = 'แสงสว่าง';
         $reply_token = $event['replyToken'];
