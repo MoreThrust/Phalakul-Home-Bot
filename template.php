@@ -1,6 +1,7 @@
 <?php
 date_default_timezone_set('Asia/Bangkok');
-echo date('Y-m-d H:i:s');
+$dateNow = date('Y-m-d');
+$timeNow = date('H:i');
 $dt = date('เมื่อวันที่ d/m/Y เวลา H:i:s น.');
 echo $dt;
 
@@ -165,8 +166,8 @@ $js_tim = [
                 "label" => "เลือกวันที่",
                 "data" => "ข้อมูล 1",
                 "mode" => "date",
-                "initial" => "2019-08-12",
-                "max" => "2020-08-12",
+                "initial" => $dateNow,
+                "max" => "2022-08-12",
                 "min" => "2019-08-11"
             ],
             [
@@ -174,7 +175,7 @@ $js_tim = [
                 "label" => "เลือกเวลา",
                 "data" => "ข้อมูล 2",
                 "mode" => "time",
-                "initial" => "00:01",
+                "initial" => $timeNow,
                 "max" => "23:22",
                 "min" => "00:00"
             ]
