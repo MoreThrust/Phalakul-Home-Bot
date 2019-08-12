@@ -165,14 +165,14 @@ $jsonFlex = [
                       [
                         "type"=> "text",
                         "text"=> "ระดับไฟฟ้า",
-                        "flex"=> 1,
+                        "flex"=> "1",
                         "size"=> "sm",
                         "weight"=> "bold"
                       ],
                       [
                         "type"=> "text",
                         "text"=> "223V",
-                        "flex"=> 2,
+                        "flex"=> "2",
                         "size"=> "sm",
                         "gravity"=> "center",
                         "color"=> "#666666"
@@ -187,14 +187,14 @@ $jsonFlex = [
                       [
                         "type"=> "text",
                         "text"=> "เปลวไฟ",
-                        "flex"=> 1,
+                        "flex"=> "1",
                         "size"=> "sm",
                         "weight"=> "bold"
                       ],
                       [
                         "type"=> "text",
                         "text"=> "ปกติ",
-                        "flex"=> 2,
+                        "flex"=> "2",
                         "size"=> "sm",
                         "color"=> "#666666"
                       ]
@@ -212,7 +212,7 @@ $jsonFlex = [
                       [
                         "type"=> "text",
                         "text"=> "29.7 °C",
-                        "flex"=> 2,
+                        "flex"=> "2",
                         "color"=> "#666666"
                       ]
                     ]
@@ -224,7 +224,7 @@ $jsonFlex = [
           "footer"=> [
             "type"=> "box",
             "layout"=> "vertical",
-            "flex"=> 0,
+            "flex"=> "0",
             "spacing"=> "sm",
             "contents"=> [
               [
