@@ -35,7 +35,7 @@ if (sizeof($request_array['events']) > 0) {
                             ],
                             [
                                 "type" => "text",
-                                "text" => "฿ 100.00",
+                                "text" => "฿ 1000.00",
                                 "size" => "3xl",
                                 "weight" => "bold",
                                 "color" => "#000000"
