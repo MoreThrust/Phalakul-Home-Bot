@@ -150,3 +150,36 @@ $js_ST = [
         ]
     ]
 ];
+
+
+
+
+$js_tim = [
+    "type" => "template",
+    "altText" => "this is a buttons template",
+    "template" => [
+        "type" => "buttons",
+        "actions" => [
+            [
+                "type" => "datetimepicker",
+                "label" => "เลือกวันที่",
+                "data" => "ข้อมูล 1",
+                "mode" => "date",
+                "initial" => "2019-08-12",
+                "max" => "2020-08-12",
+                "min" => "2019-08-11"
+            ],
+            [
+                "type" => "datetimepicker",
+                "label" => "เลือกเวลา",
+                "data" => "ข้อมูล 2",
+                "mode" => "time",
+                "initial" => "00:01",
+                "max" => "23:22",
+                "min" => "00:00"
+            ]
+        ],
+        "title" => "ตั้งเวลา",
+        "text" => "เลือกเวลาและวันที่"
+    ]
+];

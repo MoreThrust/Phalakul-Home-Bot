@@ -22,7 +22,14 @@ if (sizeof($request_array['events']) > 0) {
             ];
         }
 
-        if ($text == 'แสงสว่าง') {
+        if ($text == 'แผงควบคุม') {
+            $data = [
+                'replyToken' => $reply_token,
+                'messages' => [$js_tim]
+            ];
+        }
+
+        if ($text == 'วิธีใช้') {
             $data = [
                 'replyToken' => $reply_token,
                 'messages' => [$jsonFlex]
