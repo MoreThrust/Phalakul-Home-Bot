@@ -125,9 +125,9 @@ $jsonFlex = [
     ]
   ];
 
-if ( sizeof($request_array['events']) == 'แสงสว่าง' ) {
+if ( sizeof($request_array['events']) > 0 ) {
     foreach ($request_array['events'] as $event) {
-        $reply_message = '';
+        $reply_message = 'แสงสว่าง';
         $reply_token = $event['replyToken'];
         $text = $event['message']['text'];
         $data = [
