@@ -124,9 +124,8 @@ $jsonFlex = [
       ]
     ]
   ];
-
-  if ( sizeof($request_array['events']) > 0 ) {
-    foreach ($request_array['events'] as $event['message']['text'] == 'แสงสว่าง') {
+  $message = $jsonObj->{"events"}[0]->{"message"};
+  if ($message->{"text"} == 'วิธีใช้') {
         $reply_message = '';
         $reply_token = $event['replyToken'];
         $text = $event['message']['text'];
@@ -138,7 +137,7 @@ $jsonFlex = [
         $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
         echo "Result: ".$send_result."\r\n";
-    }
+    
 }
 
 echo "Last update 12/8/2562";
