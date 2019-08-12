@@ -142,9 +142,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 
 }
 
-date_default_timezone_set('Asian/Bangkok');
-$date = date('Y/m/d H:i:s');
-echo $date;
+echo "Last update 12/8/2562";
 function send_reply_message($url, $post_header, $post_body)
 {
     $ch = curl_init($url);
