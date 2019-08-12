@@ -7,6 +7,8 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 $message = $request_array->{"events"}[0]->{"message"};
 
+echo $request_array;
+
 $jsonFlex = [
     "type" => "flex",
     "altText" => "Flex Message",
@@ -126,7 +128,7 @@ $jsonFlex = [
     ]
   ];
 
-  if ($message->{"text"} == 'วิธีใช้') {
+if ($message->{"text"} == 'วิธีใช้') {
         $reply_message = '';
         $reply_token = $event['replyToken'];
         $text = $event['message']['text'];
