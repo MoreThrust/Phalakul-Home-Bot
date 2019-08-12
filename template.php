@@ -6,142 +6,140 @@ $jsonFlex = ["type" => "flex", "altText" => "Hello Flex Message", "contents" => 
 //$js_ST = [["type" => "flex", "altText" => "Flex Message", "contents" => ["type" => "bubble", "direction" => "ltr", "hero" => ["type" => "image", "url" => "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png", "size" => "full", "aspectRatio" => "20:13", "aspectMode" => "cover"], "body" => ["type" => "box", "layout" => "vertical", "contents" => [["type" => "text", "text" => "สถานะปัจจุบัน", "size" => "xl", "weight" => "bold"], ["type" => "box", "layout" => "horizontal", "spacing" => "xs", "margin" => "lg", "contents" => [["type" => "box", "layout" => "vertical", "flex" => 2, "contents" => [["type" => "text", "text" => "แรงดันไฟฟ้า", "size" => "lg"], ["type" => "text", "text" => "เปลวไฟ", "size" => "lg"], ["type" => "text", "text" => "อุณหภูมิ", "size" => "lg"], ["type" => "text", "text" => "ความชื้น", "size" => "lg"]]], ["type" => "box", "layout" => "vertical", "flex" => 2, "contents" => [["type" => "text", "text" => "223v", "size" => "lg", "weight" => "bold"], ["type" => "text", "text" => "ไม่พบ", "size" => "lg", "weight" => "bold"], ["type" => "text", "text" => "29.7°C", "size" => "lg", "weight" => "bold"], ["type" => "text", "text" => "45%", "size" => "lg", "weight" => "bold"]]]]]]], "footer" => ["type" => "box", "layout" => "vertical", "flex" => 0, "spacing" => "sm", "contents" => [["type" => "separator"], ["type" => "button", "action" => ["type" => "message", "label" => "เปิดแผงควบคุม", "text" => "แผงควบคุม"], "height" => "sm"], ["type" => "separator"], ["type" => "button", "action" => ["type" => "message", "label" => "เช็คสถานะอีกครั้ง", "text" => "สถานะ"], "height" => "sm"], ["type" => "separator"], ["type" => "text", "text" => "เมื่อวันที่ 22/02/62 เวลา 20:30น.", "margin" => "xxl", "size" => "xxs", "align" => "center", "gravity" => "bottom"]]]]]];
 
 $js_ST = [
-    [
-        "type" => "flex",
-        "altText" => "Flex Message",
-        "contents" => [
-            "type" => "bubble",
-            "direction" => "ltr",
-            "hero" => [
-                "type" => "image",
-                "url" => "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
-                "size" => "full",
-                "aspectRatio" => "20:13",
-                "aspectMode" => "cover"
-            ],
-            "body" => [
-                "type" => "box",
-                "layout" => "vertical",
-                "contents" => [
-                    [
-                        "type" => "text",
-                        "text" => "สถานะปัจจุบัน",
-                        "size" => "xl",
-                        "weight" => "bold"
-                    ],
-                    [
-                        "type" => "box",
-                        "layout" => "horizontal",
-                        "spacing" => "xs",
-                        "margin" => "lg",
-                        "contents" => [
-                            [
-                                "type" => "box",
-                                "layout" => "vertical",
-                                "flex" => 2,
-                                "contents" => [
-                                    [
-                                        "type" => "text",
-                                        "text" => "แรงดันไฟฟ้า",
-                                        "size" => "lg"
-                                    ],
-                                    [
-                                        "type" => "text",
-                                        "text" => "เปลวไฟ",
-                                        "size" => "lg"
-                                    ],
-                                    [
-                                        "type" => "text",
-                                        "text" => "อุณหภูมิ",
-                                        "size" => "lg"
-                                    ],
-                                    [
-                                        "type" => "text",
-                                        "text" => "ความชื้น",
-                                        "size" => "lg"
-                                    ]
+
+    "type" => "flex",
+    "altText" => "Flex Message",
+    "contents" => [
+        "type" => "bubble",
+        "direction" => "ltr",
+        "hero" => [
+            "type" => "image",
+            "url" => "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+            "size" => "full",
+            "aspectRatio" => "20:13",
+            "aspectMode" => "cover"
+        ],
+        "body" => [
+            "type" => "box",
+            "layout" => "vertical",
+            "contents" => [
+                [
+                    "type" => "text",
+                    "text" => "สถานะปัจจุบัน",
+                    "size" => "xl",
+                    "weight" => "bold"
+                ],
+                [
+                    "type" => "box",
+                    "layout" => "horizontal",
+                    "spacing" => "xs",
+                    "margin" => "lg",
+                    "contents" => [
+                        [
+                            "type" => "box",
+                            "layout" => "vertical",
+                            "flex" => 2,
+                            "contents" => [
+                                [
+                                    "type" => "text",
+                                    "text" => "แรงดันไฟฟ้า",
+                                    "size" => "lg"
+                                ],
+                                [
+                                    "type" => "text",
+                                    "text" => "เปลวไฟ",
+                                    "size" => "lg"
+                                ],
+                                [
+                                    "type" => "text",
+                                    "text" => "อุณหภูมิ",
+                                    "size" => "lg"
+                                ],
+                                [
+                                    "type" => "text",
+                                    "text" => "ความชื้น",
+                                    "size" => "lg"
                                 ]
-                            ],
-                            [
-                                "type" => "box",
-                                "layout" => "vertical",
-                                "flex" => 2,
-                                "contents" => [
-                                    [
-                                        "type" => "text",
-                                        "text" => "223v",
-                                        "size" => "lg",
-                                        "weight" => "bold"
-                                    ],
-                                    [
-                                        "type" => "text",
-                                        "text" => "ไม่พบ",
-                                        "size" => "lg",
-                                        "weight" => "bold"
-                                    ],
-                                    [
-                                        "type" => "text",
-                                        "text" => "29.7°C",
-                                        "size" => "lg",
-                                        "weight" => "bold"
-                                    ],
-                                    [
-                                        "type" => "text",
-                                        "text" => "45%",
-                                        "size" => "lg",
-                                        "weight" => "bold"
-                                    ]
+                            ]
+                        ],
+                        [
+                            "type" => "box",
+                            "layout" => "vertical",
+                            "flex" => 2,
+                            "contents" => [
+                                [
+                                    "type" => "text",
+                                    "text" => "223v",
+                                    "size" => "lg",
+                                    "weight" => "bold"
+                                ],
+                                [
+                                    "type" => "text",
+                                    "text" => "ไม่พบ",
+                                    "size" => "lg",
+                                    "weight" => "bold"
+                                ],
+                                [
+                                    "type" => "text",
+                                    "text" => "29.7°C",
+                                    "size" => "lg",
+                                    "weight" => "bold"
+                                ],
+                                [
+                                    "type" => "text",
+                                    "text" => "45%",
+                                    "size" => "lg",
+                                    "weight" => "bold"
                                 ]
                             ]
                         ]
                     ]
                 ]
-            ],
-            "footer" => [
-                "type" => "box",
-                "layout" => "vertical",
-                "flex" => 0,
-                "spacing" => "sm",
-                "contents" => [
-                    [
-                        "type" => "separator"
+            ]
+        ],
+        "footer" => [
+            "type" => "box",
+            "layout" => "vertical",
+            "flex" => 0,
+            "spacing" => "sm",
+            "contents" => [
+                [
+                    "type" => "separator"
+                ],
+                [
+                    "type" => "button",
+                    "action" => [
+                        "type" => "message",
+                        "label" => "เปิดแผงควบคุม",
+                        "text" => "แผงควบคุม"
                     ],
-                    [
-                        "type" => "button",
-                        "action" => [
-                            "type" => "message",
-                            "label" => "เปิดแผงควบคุม",
-                            "text" => "แผงควบคุม"
-                        ],
-                        "height" => "sm"
+                    "height" => "sm"
+                ],
+                [
+                    "type" => "separator"
+                ],
+                [
+                    "type" => "button",
+                    "action" => [
+                        "type" => "message",
+                        "label" => "เช็คสถานะอีกครั้ง",
+                        "text" => "สถานะ"
                     ],
-                    [
-                        "type" => "separator"
-                    ],
-                    [
-                        "type" => "button",
-                        "action" => [
-                            "type" => "message",
-                            "label" => "เช็คสถานะอีกครั้ง",
-                            "text" => "สถานะ"
-                        ],
-                        "height" => "sm"
-                    ],
-                    [
-                        "type" => "separator"
-                    ],
-                    [
-                        "type" => "text",
-                        "text" => "เมื่อวันที่ 22/02/62 เวลา 20:30น.",
-                        "margin" => "xxl",
-                        "size" => "xxs",
-                        "align" => "center",
-                        "gravity" => "bottom"
-                    ]
+                    "height" => "sm"
+                ],
+                [
+                    "type" => "separator"
+                ],
+                [
+                    "type" => "text",
+                    "text" => "เมื่อวันที่ 22/02/62 เวลา 20:30น.",
+                    "margin" => "xxl",
+                    "size" => "xxs",
+                    "align" => "center",
+                    "gravity" => "bottom"
                 ]
             ]
         ]
     ]
-];
 
-?>
+];
