@@ -129,14 +129,23 @@ if (sizeof($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
         $reply_message = '';
         $reply_token = $event['replyToken'];
-        //$text = $event['message']['text'] == 'แสงสว่าง';
+        $text = $event['message']['text'];
 
-        if($text = $event['message']['text'] == 'แสงสว่าง'){
+        if ($text == 'แสงสว่าง') {
             $data = [
-            'replyToken' => $reply_token,
-            'messages' => [$jsonFlex]
-        ];
-        
+                'replyToken' => $reply_token,
+                'messages' => [$jsonFlex]
+            ];
+        }
+
+        if ($text == 'วิธีใช้') {
+            $data = [
+                'replyToken' => $reply_token,
+                'messages' => [[
+                    'type' => 'text',
+                    'text' => 'สวัสดี'
+                ]]
+            ];
         }
 
         $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
