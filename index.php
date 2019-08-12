@@ -18,7 +18,7 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'สถานะ') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [$jsonFlex]
+                'messages' => [$js_status2]
             ];
         }
 
@@ -27,10 +27,7 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'วิธีใช้') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [[
-                    'type' => 'text',
-                    'text' => 'สวัสดี'
-                ]]
+                'messages' => [$js_status]
             ];
         }
 
