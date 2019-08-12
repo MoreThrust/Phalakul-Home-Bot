@@ -124,7 +124,7 @@ $jsonFlex = [
 
     $jsonFlex2 = [
         "type"=> "flex",
-        "altText"=> "Flex Message",
+        "altText"=> "asd Flex Message",
         "contents"=> [
           "type"=> "bubble",
           "direction"=> "ltr",
