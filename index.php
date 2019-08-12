@@ -140,6 +140,7 @@ if ( sizeof($request_array['events']) > 0 ) {
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
         echo "Result: ".$send_result."\r\n";
     }
+    
 }
 
 echo "Last update 12/8/2562";
