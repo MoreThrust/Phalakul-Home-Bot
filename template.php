@@ -137,7 +137,7 @@ $js_ST = [
                 [
                     "type" => "text",
                     "text" => $dt,
-                    "margin" => "xxl",
+                    "margin" => "lg",
                     "size" => "xxs",
                     "align" => "center",
                     "gravity" => "center"
