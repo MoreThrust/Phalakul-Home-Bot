@@ -19,7 +19,7 @@ $jsonFlex = [
     ],
     [
     "type" => "text",
-    "text" => "฿ 100.12",
+    "text" => "฿ 100.15",
     "size" => "3xl",
     "weight" => "bold",
     "color" => "#000000"
@@ -141,7 +141,7 @@ $jsonFlex = [
                     ],
                     [
                         "type" => "text",
-                        "text" => "฿ 100.99",
+                        "text" => "฿ 109.99",
                         "size" => "3xl",
                         "weight" => "bold",
                         "color" => "#000000"
