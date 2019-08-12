@@ -142,7 +142,9 @@ if ( sizeof($request_array['events']) > 0 ) {
 
 }
 
-echo "OK";
+date_default_timezone_set('Africa/Nairobi');
+$date = date('Y/m/d H:i:s');
+echo $date;
 function send_reply_message($url, $post_header, $post_body)
 {
     $ch = curl_init($url);
