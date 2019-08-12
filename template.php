@@ -1,6 +1,7 @@
 <?php
 date_default_timezone_set('Asian/Bangkok');
-$dt = date('เมื่อวันที่ d/m/Y เวลา H:i:sน.');
+echo date('Y-m-d H:i:s');
+$dt = date('เมื่อวันที่ d/m/Y เวลา H:i:s น.');
 echo $dt;
 
 // TEST
@@ -139,7 +140,7 @@ $js_ST = [
                     "margin" => "xxl",
                     "size" => "xxs",
                     "align" => "center",
-                    "gravity" => "bottom"
+                    "gravity" => "center"
                 ]
             ]
         ]
