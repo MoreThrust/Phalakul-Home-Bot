@@ -18,7 +18,7 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'สถานะ') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [$js_CPN]
+                'messages' => [$js_ST]
             ];
         }
 
