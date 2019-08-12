@@ -125,58 +125,142 @@ $jsonFlex = [
 
 
 $jsonFlex2 = [
-    "type" => "flex",
-    "altText" => "Flex Message",
-    "contents" => [
-        "type" => "bubble",
-        "direction" => "ltr",
-        "header" => [
-            "type" => "box",
-            "layout" => "vertical",
-            "contents" => [
-                [
-                    "type" => "text",
-                    "text" => "สถานะ",
-                    "size" => "xl",
-                    "align" => "start",
-                    "color" => "#00AE44"
-                ]
+    [
+        "type" => "flex",
+        "altText" => "Flex Message",
+        "contents" => [
+          "type" => "bubble",
+          "hero" => [
+            "type" => "image",
+            "url" => "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+            "size" => "full",
+            "aspectRatio" => "20 =>13",
+            "aspectMode" => "cover",
+            "action" => [
+              "type" => "uri",
+              "label" => "Line",
+              "uri" => "https://linecorp.com/"
             ]
-        ],
-        "body" => [
+          ],
+          "body" => [
             "type" => "box",
             "layout" => "vertical",
             "contents" => [
-                [
-                    "type" => "text",
-                    "text" => "Body",
-                    "align" => "center"
-                ]
-            ]
-        ],
-        "footer" => [
-            "type" => "box",
-            "layout" => "vertical",
-            "contents" => [
-                [
-                    "type" => "button",
-                    "action" => [
-                        "type" => "message",
-                        "label" => "เปิดแผงควบคุม",
-                        "text" => "แผงควบคุม"
+              [
+                "type" => "text",
+                "text" => "สถานะ",
+                "size" => "xl",
+                "weight" => "bold"
+              ],
+              [
+                "type" => "box",
+                "layout" => "vertical",
+                "spacing" => "sm",
+                "margin" => "lg",
+                "contents" => [
+                  [
+                    "type" => "box",
+                    "layout" => "horizontal",
+                    "spacing" => "sm",
+                    "contents" => [
+                      [
+                        "type" => "text",
+                        "text" => "ระดับไฟฟ้า",
+                        "flex" => 1,
+                        "size" => "sm",
+                        "align" => "start",
+                        "weight" => "bold"
+                      ],
+                      [
+                        "type" => "text",
+                        "text" => "223V",
+                        "flex" => 2,
+                        "size" => "sm",
+                        "align" => "start",
+                        "gravity" => "center",
+                        "color" => "#666666"
+                      ]
                     ]
+                  ],
+                  [
+                    "type" => "box",
+                    "layout" => "horizontal",
+                    "spacing" => "sm",
+                    "contents" => [
+                      [
+                        "type" => "text",
+                        "text" => "เปลวไฟ",
+                        "flex" => 1,
+                        "size" => "sm",
+                        "weight" => "bold"
+                      ],
+                      [
+                        "type" => "text",
+                        "text" => "ปกติ",
+                        "flex" => 2,
+                        "size" => "sm",
+                        "color" => "#666666"
+                      ]
+                    ]
+                  ],
+                  [
+                    "type" => "box",
+                    "layout" => "horizontal",
+                    "contents" => [
+                      [
+                        "type" => "text",
+                        "text" => "อุณหภูมิ",
+                        "weight" => "bold"
+                      ],
+                      [
+                        "type" => "text",
+                        "text" => "29.7 °C",
+                        "flex" => 2,
+                        "color" => "#666666"
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "footer" => [
+            "type" => "box",
+            "layout" => "vertical",
+            "flex" => 0,
+            "spacing" => "sm",
+            "contents" => [
+              [
+                "type" => "separator"
+              ],
+              [
+                "type" => "button",
+                "action" => [
+                  "type" => "message",
+                  "label" => "เปิดแผงควบคุม",
+                  "text" => "แผงควบคุม"
                 ],
-                [
-                    "type" => "button",
-                    "action" => [
-                        "type" => "message",
-                        "label" => "Button",
-                        "text" => "Button"
-                    ]
-                ]
+                "height" => "sm"
+              ],
+              [
+                "type" => "separator"
+              ],
+              [
+                "type" => "button",
+                "action" => [
+                  "type" => "message",
+                  "label" => "เช็คสถานะอีกครั้ง",
+                  "text" => "สถานะ"
+                ],
+                "height" => "sm"
+              ],
+              [
+                "type" => "separator"
+              ]
             ]
+          ]
         ]
-    ]
+      ]
 ];
 
 
