@@ -142,7 +142,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 
 }
 
-date_default_timezone_set('Africa/Nairobi');
+date_default_timezone_set('Asian/Bangkok');
 $date = date('Y/m/d H:i:s');
 echo $date;
 function send_reply_message($url, $post_header, $post_body)
