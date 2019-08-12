@@ -5,7 +5,6 @@ $channelSecret = 'af6aadbace7145526e4d024d7b605bb5';
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
-$message = $jsonObj->{"events"}[0]->{"message"};
 
 $jsonFlex = [
     "type" => "flex",
@@ -126,9 +125,10 @@ $jsonFlex = [
     ]
   ];
 
-if ($message == 'แสงสว่าง' ) {
-    foreach ($request_array['events'] as $event) {
-        $reply_message = '';
+if ( sizeof($request_array['events']) > 0 ) {
+
+    foreach ($request_array['events'] as $message) {
+        $reply_message = 'แสงสว่าง';
         $reply_token = $event['replyToken'];
         $text = $event['message']['text'];
         $data = [
@@ -139,6 +139,7 @@ if ($message == 'แสงสว่าง' ) {
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
         echo "Result: ".$send_result."\r\n";
     }
+
 }
 
 echo "OK";
