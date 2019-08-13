@@ -18,7 +18,7 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'แสงสว่าง') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [$jsonFlex]
+                'messages' => [$js_tdpiup]
             ];
         }
 
