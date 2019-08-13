@@ -184,3 +184,24 @@ $js_tim = [
         "text" => "เลือกเวลาและวันที่"
     ]
 ];
+
+$js_tdpiup = [
+    "type" => "template",
+    "altText" => "this is a buttons template",
+    "template" => [
+      "type" => "buttons",
+      "actions" => [
+        [
+          "type" => "datetimepicker",
+          "label" => "เลือกวันและเวลา",
+          "data" => "storeId=12345",
+          "mode" => "datetime",
+          //"initial" => "2019-08-13T14:08",
+          //"max" => "2020-08-13T14:08",
+          //"min" => "2018-08-13T14:08"
+        ]
+      ],
+      "title" => "ตั้งเวลา",
+      "text" => "เลือกวันและเวลา"
+    ]
+];

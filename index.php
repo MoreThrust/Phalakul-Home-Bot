@@ -15,6 +15,13 @@ if (sizeof($request_array['events']) > 0) {
 
         //========================================== แสงสว่าง ==========================================//
 
+        if ($text == 'แสงสว่าง') {
+            $data = [
+                'replyToken' => $reply_token,
+                'messages' => [$jsonFlex]
+            ];
+        }
+
         if ($text == 'สถานะ') {
             $data = [
                 'replyToken' => $reply_token,
