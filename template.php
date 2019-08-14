@@ -1,4 +1,5 @@
 <?php
+include("Status.php");
 date_default_timezone_set('Asia/Bangkok');
 $dateNow = date('Y-m-d');
 $timeNow = date('H:i');
@@ -80,7 +81,7 @@ $js_ST = [
               "contents" => [
                 [
                   "type" => "text",
-                  "text" => "223v",
+                  "text" => $st_Voltage,
                   "size" => "lg",
                   "weight" => "bold",
                   "color" => "#E67E22"
