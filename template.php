@@ -195,311 +195,108 @@ $js_ST = [
 
 
 js_CP = [
-    "type" => "flex",
-    "altText" => "Flex Message",
-    "contents" => [
-        "type" => "carousel",
-        "contents" => [
+    
+  "type" => "flex",
+  "altText" => "Flex Message",
+  "contents" => [
+    "type" => "bubble",
+    "hero" => [
+      "type" => "image",
+      "url" => "https://scdn.line-apps.com/n/channel_devcenter/img/fx/02_1_news_thumbnail_1.png",
+      "size" => "full",
+      "aspectRatio" => "20:13",
+      "aspectMode" => "cover"
+    ],
+    "body" => [
+      "type" => "box",
+      "layout" => "vertical",
+      "spacing" => "sm",
+      "contents" => [
+        [
+          "type" => "text",
+          "text" => "บริเวณบ้าน",
+          "size" => "xl",
+          "weight" => "bold"
+        ],
+        [
+          "type" => "box",
+          "layout" => "horizontal",
+          "contents" => [
             [
-                "type" => "bubble",
-                "hero" => [
-                    "type" => "image",
-                    "url" => "https://scdn.line-apps.com/n/channel_devcenter/img/fx/02_1_news_thumbnail_1.png",
-                    "size" => "full",
-                    "aspectRatio" => "20:13",
-                    "aspectMode" => "cover"
+              "type" => "box",
+              "layout" => "vertical",
+              "contents" => [
+                [
+                  "type" => "text",
+                  "text" => "อุณหภูมิ",
+                  "size" => "lg"
                 ],
-                "body" => [
-                    "type" => "box",
-                    "layout" => "vertical",
-                    "spacing" => "sm",
-                    "contents" => [
-                        [
-                            "type" => "text",
-                            "text" => "บริเวณบ้าน",
-                            "size" => "xl",
-                            "weight" => "bold"
-                        ],
-                        [
-                            "type" => "box",
-                            "layout" => "horizontal",
-                            "contents" => [
-                                [
-                                    "type" => "box",
-                                    "layout" => "vertical",
-                                    "contents" => [
-                                        [
-                                            "type" => "text",
-                                            "text" => "อุณหภูมิ",
-                                            "size" => "lg"
-                                        ],
-                                        [
-                                            "type" => "text",
-                                            "text" => "ความชื้น",
-                                            "size" => "lg"
-                                        ],
-                                        [
-                                            "type" => "text",
-                                            "text" => "ประตู",
-                                            "size" => "lg"
-                                        ]
-                                    ]
-                                ],
-                                [
-                                    "type" => "box",
-                                    "layout" => "vertical",
-                                    "contents" => [
-                                        [
-                                            "type" => "text",
-                                            "text" => "30.1°C",
-                                            "size" => "lg",
-                                            "weight" => "bold"
-                                        ],
-                                        [
-                                            "type" => "text",
-                                            "text" => "24%",
-                                            "size" => "lg",
-                                            "weight" => "bold"
-                                        ],
-                                        [
-                                            "type" => "text",
-                                            "text" => "ล็อกอยู่",
-                                            "size" => "lg",
-                                            "weight" => "bold"
-                                        ]
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ]
+                [
+                  "type" => "text",
+                  "text" => "ความชื้น",
+                  "size" => "lg"
                 ],
-                "footer" => [
-                    "type" => "box",
-                    "layout" => "vertical",
-                    "spacing" => "sm",
-                    "contents" => [
-                        [
-                            "type" => "button",
-                            "action" => [
-                                "type" => "message",
-                                "label" => "ล็อกประตู",
-                                "text" => "ล็อกประตู"
-                            ],
-                            "style" => "primary"
-                        ],
-                        [
-                            "type" => "button",
-                            "action" => [
-                                "type" => "message",
-                                "label" => "ปลดล็อกประตู",
-                                "text" => "ปลดล็อกประตู"
-                            ],
-                            "color" => "#EC6262",
-                            "style" => "primary"
-                        ]
-                    ]
+                [
+                  "type" => "text",
+                  "text" => "ประตู",
+                  "size" => "lg"
                 ]
+              ]
             ],
             [
-                "type" => "bubble",
-                "hero" => [
-                    "type" => "image",
-                    "url" => "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_5_carousel.png",
-                    "size" => "full",
-                    "aspectRatio" => "20:13",
-                    "aspectMode" => "cover"
+              "type" => "box",
+              "layout" => "vertical",
+              "contents" => [
+                [
+                  "type" => "text",
+                  "text" => "30.1°C",
+                  "size" => "lg",
+                  "weight" => "bold"
                 ],
-                "body" => [
-                    "type" => "box",
-                    "layout" => "vertical",
-                    "spacing" => "sm",
-                    "contents" => [
-                        [
-                            "type" => "text",
-                            "text" => "ห้องนอน",
-                            "size" => "xl",
-                            "weight" => "bold"
-                        ],
-                        [
-                            "type" => "box",
-                            "layout" => "horizontal",
-                            "contents" => [
-                                [
-                                    "type" => "box",
-                                    "layout" => "vertical",
-                                    "contents" => [
-                                        [
-                                            "type" => "text",
-                                            "text" => "แสงสว่าง",
-                                            "size" => "lg"
-                                        ],
-                                        [
-                                            "type" => "text",
-                                            "text" => "อุณหภูมิ",
-                                            "size" => "lg"
-                                        ],
-                                        [
-                                            "type" => "text",
-                                            "text" => "ความชื้น",
-                                            "size" => "lg"
-                                        ]
-                                    ]
-                                ],
-                                [
-                                    "type" => "box",
-                                    "layout" => "vertical",
-                                    "contents" => [
-                                        [
-                                            "type" => "text",
-                                            "text" => "ปิดอยู่",
-                                            "size" => "lg",
-                                            "weight" => "bold"
-                                        ],
-                                        [
-                                            "type" => "text",
-                                            "text" => "30.1°C",
-                                            "size" => "lg",
-                                            "weight" => "bold"
-                                        ],
-                                        [
-                                            "type" => "text",
-                                            "text" => "24%",
-                                            "size" => "lg",
-                                            "weight" => "bold"
-                                        ]
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ]
+                [
+                  "type" => "text",
+                  "text" => "24%",
+                  "size" => "lg",
+                  "weight" => "bold"
                 ],
-                "footer" => [
-                    "type" => "box",
-                    "layout" => "vertical",
-                    "spacing" => "sm",
-                    "contents" => [
-                        [
-                            "type" => "button",
-                            "action" => [
-                                "type" => "message",
-                                "label" => "เปิดไฟ",
-                                "text" => "เปิดไฟห้องนอน"
-                            ],
-                            "style" => "primary"
-                        ],
-                        [
-                            "type" => "button",
-                            "action" => [
-                                "type" => "message",
-                                "label" => "ปิดไฟ",
-                                "text" => "ปิดไฟห้องนอน"
-                            ],
-                            "color" => "#EC6262",
-                            "style" => "primary"
-                        ]
-                    ]
+                [
+                  "type" => "text",
+                  "text" => "ล็อกอยู่",
+                  "size" => "lg",
+                  "weight" => "bold"
                 ]
-            ],
-            [
-                "type" => "bubble",
-                "hero" => [
-                    "type" => "image",
-                    "url" => "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_6_carousel.png",
-                    "size" => "full",
-                    "aspectRatio" => "20:13",
-                    "aspectMode" => "cover"
-                ],
-                "body" => [
-                    "type" => "box",
-                    "layout" => "vertical",
-                    "spacing" => "sm",
-                    "contents" => [
-                        [
-                            "type" => "text",
-                            "text" => "ห้องนั่งเล่น",
-                            "size" => "xl",
-                            "weight" => "bold"
-                        ],
-                        [
-                            "type" => "box",
-                            "layout" => "horizontal",
-                            "contents" => [
-                                [
-                                    "type" => "box",
-                                    "layout" => "vertical",
-                                    "contents" => [
-                                        [
-                                            "type" => "text",
-                                            "text" => "แสงสว่าง",
-                                            "size" => "lg"
-                                        ],
-                                        [
-                                            "type" => "text",
-                                            "text" => "อุณหภูมิ",
-                                            "size" => "lg"
-                                        ],
-                                        [
-                                            "type" => "text",
-                                            "text" => "ความชื้น",
-                                            "size" => "lg"
-                                        ]
-                                    ]
-                                ],
-                                [
-                                    "type" => "box",
-                                    "layout" => "vertical",
-                                    "contents" => [
-                                        [
-                                            "type" => "text",
-                                            "text" => "ปิดอยู่",
-                                            "size" => "lg",
-                                            "weight" => "bold"
-                                        ],
-                                        [
-                                            "type" => "text",
-                                            "text" => "30.1°C",
-                                            "size" => "lg",
-                                            "weight" => "bold"
-                                        ],
-                                        [
-                                            "type" => "text",
-                                            "text" => "24%",
-                                            "size" => "lg",
-                                            "weight" => "bold"
-                                        ]
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ]
-                ],
-                "footer" => [
-                    "type" => "box",
-                    "layout" => "vertical",
-                    "spacing" => "sm",
-                    "contents" => [
-                        [
-                            "type" => "button",
-                            "action" => [
-                                "type" => "message",
-                                "label" => "เปิดไฟ",
-                                "text" => "เปิดไฟห้องนอน"
-                            ],
-                            "style" => "primary"
-                        ],
-                        [
-                            "type" => "button",
-                            "action" => [
-                                "type" => "message",
-                                "label" => "ปิดไฟ",
-                                "text" => "ปิดไฟห้องนอน"
-                            ],
-                            "color" => "#EC6262",
-                            "style" => "primary"
-                        ]
-                    ]
-                ]
+              ]
             ]
+          ]
         ]
+      ]
+    ],
+    "footer" => [
+      "type" => "box",
+      "layout" => "vertical",
+      "spacing" => "sm",
+      "contents" => [
+        [
+          "type" => "button",
+          "action" => [
+            "type" => "message",
+            "label" => "ล็อกประตู",
+            "text" => "ล็อกประตู"
+          ],
+          "style" => "primary"
+        ],
+        [
+          "type" => "button",
+          "action" => [
+            "type" => "message",
+            "label" => "ปลดล็อกประตู",
+            "text" => "ปลดล็อกประตู"
+          ],
+          "color" => "#EC6262",
+          "style" => "primary"
+        ]
+      ]
     ]
+  ]
+
 ];
