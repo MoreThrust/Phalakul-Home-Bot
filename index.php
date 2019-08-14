@@ -15,9 +15,7 @@ if (sizeof($request_array['events']) > 0) {
 
         //========================================== แสงสว่าง ==========================================//
 
-        if ($text == 'แสงสว่าง') {
-
-        }
+        if ($text == 'แสงสว่าง') { }
 
         if ($text == 'แอร์') { }
 
@@ -42,6 +40,26 @@ if (sizeof($request_array['events']) > 0) {
                 'replyToken' => $reply_token,
                 'messages' => [$js_CP]
             ];
+        }
+
+        if ($text == 'ล็อกประตู') {
+            $curl = curl_init();
+            curl_setopt_array($curl, array(
+                CURLOPT_RETURNTRANSFER => 1,
+                CURLOPT_URL => 'https://api.anto.io/channel/set/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/Door/1',
+                CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+            ));
+            $resp = curl_exec($curl);
+            curl_close($curl);
+        }elseif($text == 'ปลดล็อกประตู'){
+            $curl = curl_init();
+            curl_setopt_array($curl, array(
+                CURLOPT_RETURNTRANSFER => 1,
+                CURLOPT_URL => 'https://api.anto.io/channel/set/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/Door/0',
+                CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+            ));
+            $resp = curl_exec($curl);
+            curl_close($curl);
         }
 
         //========================================== จบแสงสว่าง ==========================================//
