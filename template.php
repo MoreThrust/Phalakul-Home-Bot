@@ -196,107 +196,178 @@ $js_ST = [
 
 js_CP = [
     
-  "type" => "flex",
-  "altText" => "Flex Message",
-  "contents" => [
-    "type" => "bubble",
-    "hero" => [
-      "type" => "image",
-      "url" => "https://scdn.line-apps.com/n/channel_devcenter/img/fx/02_1_news_thumbnail_1.png",
-      "size" => "full",
-      "aspectRatio" => "20:13",
-      "aspectMode" => "cover"
-    ],
-    "body" => [
-      "type" => "box",
-      "layout" => "vertical",
-      "spacing" => "sm",
-      "contents" => [
-        [
-          "type" => "text",
-          "text" => "บริเวณบ้าน",
-          "size" => "xl",
-          "weight" => "bold"
+    "type" => "flex",
+    "altText" => "สถานะปัจจุบัน",
+    "contents" => [
+        "type" => "bubble",
+        "direction" => "ltr",
+        "hero" => [
+            "type" => "image",
+            "url" => "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+            "size" => "full",
+            "aspectRatio" => "20:13",
+            "aspectMode" => "cover"
         ],
-        [
-          "type" => "box",
-          "layout" => "horizontal",
-          "contents" => [
-            [
-              "type" => "box",
-              "layout" => "vertical",
-              "contents" => [
+        "body" => [
+            "type" => "box",
+            "layout" => "vertical",
+            "contents" => [
                 [
-                  "type" => "text",
-                  "text" => "อุณหภูมิ",
-                  "size" => "lg"
+                    "type" => "text",
+                    "text" => "สถานะปัจจุบัน",
+                    "size" => "xl",
+                    "weight" => "bold"
                 ],
                 [
-                  "type" => "text",
-                  "text" => "ความชื้น",
-                  "size" => "lg"
-                ],
-                [
-                  "type" => "text",
-                  "text" => "ประตู",
-                  "size" => "lg"
+                    "type" => "box",
+                    "layout" => "vertical",
+                    "spacing" => "sm",
+                    "margin" => "lg",
+                    "contents" => [
+                        [
+                            "type" => "text",
+                            "text" => "ห้องนั่งเล่น",
+                            "size" => "lg",
+                            "weight" => "bold"
+                        ],
+                        [
+                            "type" => "box",
+                            "layout" => "horizontal",
+                            "contents" => [
+                                [
+                                    "type" => "box",
+                                    "layout" => "vertical",
+                                    "flex" => 2,
+                                    "contents" => [
+                                        [
+                                            "type" => "text",
+                                            "text" => "แรงดันไฟฟ้า",
+                                            "size" => "lg"
+                                        ],
+                                        [
+                                            "type" => "text",
+                                            "text" => "อุณหภูมิ",
+                                            "size" => "lg"
+                                        ],
+                                        [
+                                            "type" => "text",
+                                            "text" => "ความชื้น",
+                                            "size" => "lg"
+                                        ],
+                                        [
+                                            "type" => "text",
+                                            "text" => "ฝน",
+                                            "size" => "lg"
+                                        ],
+                                        [
+                                            "type" => "text",
+                                            "text" => "ประตูบ้าน",
+                                            "size" => "lg"
+                                        ],
+                                        [
+                                            "type" => "text",
+                                            "text" => "เปิดอยู่",
+                                            "size" => "lg"
+                                        ]
+                                    ]
+                                ],
+                                [
+                                    "type" => "box",
+                                    "layout" => "vertical",
+                                    "flex" => 2,
+                                    "contents" => [
+                                        [
+                                            "type" => "text",
+                                            "text" => $st_Voltage,
+                                            "size" => "lg",
+                                            "weight" => "bold",
+                                            "color" => "#E67E22"
+                                        ],
+                                        [
+                                            "type" => "text",
+                                            "text" => $st_living_temp,
+                                            "size" => "lg",
+                                            "weight" => "bold",
+                                            "color" => "#3867D6"
+                                        ],
+                                        [
+                                            "type" => "text",
+                                            "text" => $st_living_humi,
+                                            "size" => "lg",
+                                            "weight" => "bold",
+                                            "color" => "#3867D6"
+                                        ],
+                                        [
+                                            "type" => "text",
+                                            "text" => $st_rain,
+                                            "size" => "lg",
+                                            "weight" => "bold",
+                                            "color" => "#0FB9B1"
+                                        ],
+                                        [
+                                            "type" => "text",
+                                            "text" => $st_door,
+                                            "size" => "lg",
+                                            "weight" => "bold",
+                                            "color" => $st_door_c
+                                        ],
+                                        [
+                                            "type" => "text",
+                                            "text" => $st_living_lamp,
+                                            "size" => "lg",
+                                            "weight" => "bold",
+                                            "color" => $st_living_lamp_c
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
                 ]
-              ]
-            ],
-            [
-              "type" => "box",
-              "layout" => "vertical",
-              "contents" => [
-                [
-                  "type" => "text",
-                  "text" => "30.1°C",
-                  "size" => "lg",
-                  "weight" => "bold"
-                ],
-                [
-                  "type" => "text",
-                  "text" => "24%",
-                  "size" => "lg",
-                  "weight" => "bold"
-                ],
-                [
-                  "type" => "text",
-                  "text" => "ล็อกอยู่",
-                  "size" => "lg",
-                  "weight" => "bold"
-                ]
-              ]
             ]
-          ]
-        ]
-      ]
-    ],
-    "footer" => [
-      "type" => "box",
-      "layout" => "vertical",
-      "spacing" => "sm",
-      "contents" => [
-        [
-          "type" => "button",
-          "action" => [
-            "type" => "message",
-            "label" => "ล็อกประตู",
-            "text" => "ล็อกประตู"
-          ],
-          "style" => "primary"
         ],
-        [
-          "type" => "button",
-          "action" => [
-            "type" => "message",
-            "label" => "ปลดล็อกประตู",
-            "text" => "ปลดล็อกประตู"
-          ],
-          "color" => "#EC6262",
-          "style" => "primary"
+        "footer" => [
+            "type" => "box",
+            "layout" => "vertical",
+            "flex" => 0,
+            "spacing" => "sm",
+            "contents" => [
+                [
+                    "type" => "button",
+                    "action" => [
+                        "type" => "message",
+                        "label" => "เปิดแผงควบคุม",
+                        "text" => "แผงควบคุม"
+                    ],
+                    "color" => "#2980B9",
+                    "height" => "md",
+                    "style" => "primary"
+                ],
+                [
+                    "type" => "button",
+                    "action" => [
+                        "type" => "message",
+                        "label" => "เช็คสถานะอีกครั้ง",
+                        "text" => "สถานะ"
+                    ],
+                    "color" => "#F39C12",
+                    "margin" => "md",
+                    "height" => "md",
+                    "style" => "primary"
+                ],
+                [
+                    "type" => "separator",
+                    "margin" => "xl"
+                ],
+                [
+                    "type" => "text",
+                    "text" => $dt,
+                    "margin" => "lg",
+                    "size" => "xxs",
+                    "align" => "center",
+                    "gravity" => "center"
+                ]
+            ]
         ]
-      ]
     ]
-  ]
-
 ];
