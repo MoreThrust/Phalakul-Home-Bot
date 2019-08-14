@@ -133,7 +133,7 @@ $js_ST = [
                                             "text" => $st_living_lamp,
                                             "size" => "lg",
                                             "weight" => "bold",
-                                            "color" => $living_lamp_c
+                                            "color" => $st_living_lamp_c
                                         ]
                                     ]
                                 ]
