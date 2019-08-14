@@ -155,7 +155,7 @@ $js_ST = [
         ],
         [
           "type" => "text",
-          "text" => "เมื่อวันที่ 22/02/62 เวลา 20:30น.",
+          "text" => $dt,
           "margin" => "lg",
           "size" => "xxs",
           "align" => "center",
