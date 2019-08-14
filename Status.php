@@ -10,7 +10,7 @@ curl_setopt_array($curl, array(
 $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
-$st_Voltage = $val[7];
+$st_Voltage = $val[7]." v";
 ?>
 
 
