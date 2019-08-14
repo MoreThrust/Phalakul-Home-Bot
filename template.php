@@ -264,9 +264,10 @@ $js_CP = [
                                         ],
                                         [
                                             "type" => "text",
-                                            "text" => "ล็อกอยู่",
+                                            "text" => $st_door,
                                             "size" => "lg",
-                                            "weight" => "bold"
+                                            "weight" => "bold",
+                                            "color" => $st_door_c
                                         ]
                                     ]
                                 ]
@@ -452,19 +453,20 @@ $js_CP = [
                                     "contents" => [
                                         [
                                             "type" => "text",
-                                            "text" => "ปิดอยู่",
+                                            "text" => $st_living_lamp,
+                                            "size" => "lg",
+                                            "weight" => "bold",
+                                            "color" => $st_living_lamp_c
+                                        ],
+                                        [
+                                            "type" => "text",
+                                            "text" => $st_living_temp,
                                             "size" => "lg",
                                             "weight" => "bold"
                                         ],
                                         [
                                             "type" => "text",
-                                            "text" => "30.1°C",
-                                            "size" => "lg",
-                                            "weight" => "bold"
-                                        ],
-                                        [
-                                            "type" => "text",
-                                            "text" => "24%",
+                                            "text" => $st_living_humi,
                                             "size" => "lg",
                                             "weight" => "bold"
                                         ]
