@@ -14,7 +14,7 @@ $jsonFlex = ["type" => "flex", "altText" => "Hello Flex Message", "contents" => 
 
 $js_ST = [
     "type" => "flex",
-    "altText" => "Flex Message",
+    "altText" => "สถานะปัจจุบัน",
     "contents" => [
         "type" => "bubble",
         "direction" => "ltr",
