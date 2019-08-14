@@ -408,6 +408,16 @@ $js_CP = [
                             ],
                             "color" => "#EC6262",
                             "style" => "primary"
+                        ],
+                        [
+                            "type" => "button",
+                            "action" => [
+                                "type" => "message",
+                                "label" => "เช็คสถานะอีกครั้ง",
+                                "text" => "แผงควบคุม"
+                            ],
+                            "color" => "#F39C12",
+                            "style" => "primary"
                         ]
                     ]
                 ]
@@ -508,6 +518,16 @@ $js_CP = [
                                 "text" => "ปิดไฟห้องนอน"
                             ],
                             "color" => "#EC6262",
+                            "style" => "primary"
+                        ],
+                        [
+                            "type" => "button",
+                            "action" => [
+                                "type" => "message",
+                                "label" => "เช็คสถานะอีกครั้ง",
+                                "text" => "แผงควบคุม"
+                            ],
+                            "color" => "#F39C12",
                             "style" => "primary"
                         ]
                     ]
