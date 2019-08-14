@@ -371,13 +371,15 @@ $js_CP = [
                                             "type" => "text",
                                             "text" => "30.1°C",
                                             "size" => "lg",
-                                            "weight" => "bold"
+                                            "weight" => "bold",
+                                            "color" => "#3867D6"
                                         ],
                                         [
                                             "type" => "text",
                                             "text" => "24%",
                                             "size" => "lg",
-                                            "weight" => "bold"
+                                            "weight" => "bold",
+                                            "color" => "#3867D6"
                                         ]
                                     ]
                                 ]
@@ -482,13 +484,15 @@ $js_CP = [
                                             "type" => "text",
                                             "text" => $st_living_temp,
                                             "size" => "lg",
-                                            "weight" => "bold"
+                                            "weight" => "bold",
+                                            "color" => "#3867D6"
                                         ],
                                         [
                                             "type" => "text",
                                             "text" => $st_living_humi,
                                             "size" => "lg",
-                                            "weight" => "bold"
+                                            "weight" => "bold",
+                                            "color" => "#3867D6"
                                         ]
                                     ]
                                 ]
