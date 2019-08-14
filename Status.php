@@ -43,7 +43,12 @@ $curl = curl_init();
 curl_setopt_array($curl, array(CURLOPT_RETURNTRANSFER => 1,
 CURLOPT_URL => 'https://api.anto.io/channel/get/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/Door',CURLOPT_USERAGENT => 'Codular Sample cURL Request'));
 $resp = curl_exec($curl);curl_close($curl);$val = explode('"', $resp);
-if($val[7] == "1"){$st_door = "ล็อกแล้ว";}elseif($val[7] == "0"){$st_door = "ยังไม่ได้ล็อก";}
+if($val[7] == "1"){
+    $st_door = "ล็อกแล้ว";
+    $st_door_c = "#20bf6b";
+}elseif($val[7] == "0"){
+    $st_door = "ยังไม่ได้ล็อก";}
+    $st_door_c = "#eb3b5a";
 ?>
 <!-- ==================== END Door ==================== -->
 

@@ -126,7 +126,7 @@ $js_ST = [
                                             "text" => $st_door,
                                             "size" => "lg",
                                             "weight" => "bold",
-                                            "color" => "#EB3B5A"
+                                            "color" => $st_door_c
                                         ],
                                         [
                                             "type" => "text",
