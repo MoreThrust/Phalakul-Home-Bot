@@ -1,40 +1,20 @@
 <!-- ==================== Voltage ==================== -->
-
-<?php
-$curl = curl_init();
-curl_setopt_array($curl, array(
-    CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.anto.io/channel/get/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/Voltage',
-    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-));
-$resp = curl_exec($curl);
-curl_close($curl);
-$val = explode('"', $resp);
-$st_Voltage = $val[7]."V";
-?>
-
-
+<?php $curl = curl_init(); 
+curl_setopt_array($curl, array( CURLOPT_RETURNTRANSFER => 1, 
+CURLOPT_URL => 'https://api.anto.io/channel/get/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/Voltage', CURLOPT_USERAGENT => 'Codular Sample cURL Request' )); 
+$resp = curl_exec($curl); curl_close($curl); $val = explode('"', $resp); $st_Voltage = $val[7]."V"; ?>
 <!-- ==================== END Voltage ==================== -->
 
 
+<!-- ==================== Rain ==================== -->
 <?php
 $curl = curl_init();
-curl_setopt_array($curl, array(
-    CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/lamp_workshop_room',
-    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-));
-$resp = curl_exec($curl);
-curl_close($curl);
-$val = explode('"', $resp);
-if($val[7] == "1"){
-    $st_lamp_ws = "ไฟห้องทำงาน: เปิดอยู่";
-    $st_lamp_ws2 = " 􀔃􀇣blue circle􏿿";
-}elseif($val[7] == "0"){
-    $st_lamp_ws = "ไฟห้องทำงาน: ปิดอยู่";
-    $st_lamp_ws2 = " 􀔃􀇢red circle􏿿";
-}
+curl_setopt_array($curl, array(CURLOPT_RETURNTRANSFER => 1,
+CURLOPT_URL => 'https://api.anto.io/channel/get/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/Rain',CURLOPT_USERAGENT => 'Codular Sample cURL Request'));
+$resp = curl_exec($curl);curl_close($curl);$val = explode('"', $resp);
+if($val[7] == "1"){$st_rain = "ฝนกำลังตก";}elseif($val[7] == "0"){$st_rain = "ไม่มีฝน";}
 ?>
+<!-- ==================== END Rain ==================== -->
 
 <?php
 $curl = curl_init();

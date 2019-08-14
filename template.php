@@ -102,7 +102,7 @@ $js_ST = [
                 ],
                 [
                   "type" => "text",
-                  "text" => "ไม่มีฝน",
+                  "text" => $st_rain,
                   "size" => "lg",
                   "weight" => "bold",
                   "color" => "#0FB9B1"
