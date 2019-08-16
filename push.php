@@ -1,74 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title></title>
-<style>
-body {
-background: #ccc;
-}
-input[type=text] {
-width: 218px;
-}
-input[type=submit] {
-background: #000;
-color: #fff;
-}
-input[type=submit], input[type=text] {
-padding: 9px;
-font-size: 18px;
-line-height: 18px;
-float: left;
-border: 0;
-display: block;
-margin: 0;
-}
-</style>
-</head>
-<body>
-<br>
-<table align=”center”>
-<tr align=”center”>
-<td align=”center”>
-<form action=”” method=”post” align=”center”>
-<input type=”text” name=”msg”><br><br>
-<input type=”submit” name=”SubmitButton”>
-</form>
-</td>
-</tr>
-
-</table>
-</body>
-</html>
 <?php
-error_reporting(0);
-$id = $_REQUEST[‘id’];
-if(isset($_POST[‘SubmitButton’])){
-$msg = $_POST[“msg”];
-
-$curl = curl_init();
-curl_setopt_array($curl, array(
-CURLOPT_URL => “https://api.line.me/v2/bot/message/push",
-CURLOPT_RETURNTRANSFER => true,
-CURLOPT_ENCODING => “”,
-CURLOPT_MAXREDIRS => 10,
-CURLOPT_TIMEOUT => 30,
-CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-CURLOPT_CUSTOMREQUEST => “POST”,
-CURLOPT_POSTFIELDS => “{\r\n\r\n \”to\”: \”$id\”,\r\n\r\n \”messages\”: [{\r\n\r\n \”type\”: \”text\”,\r\n\r\n \”text\”: \”$msg\”\r\n\r\n }]\r\n\r\n}”,
-CURLOPT_HTTPHEADER => array(
-“authorization: Bearer line_token”,
-“cache-control: no-cache”,
-“content-type: application/json”,
-“postman-token: 99e1d5c3-fd7a-8163-c413–687e5cb8e3c8”
-),
-));
-$response = curl_exec($curl);
-$err = curl_error($curl);
-curl_close($curl);
-if ($err) {
-// echo “cURL Error #:” . $err;
-} else {
-// echo $response;
-}
-}
+   $accessToken = "0o0ysAsM9n8ogghDWIpHI7Hes2cIhXyaES1Hu5QA1GoJFpoF3/oR3QHHO8CJ41G1XzU2HLh7fYPXFNfUF5vHnTMHfzvVvV5bmjY8sYQAMEr6dt3JE6A0Oz8Iync6wKjk+VO3OvdvsQSOu6TSu8liQwdB04t89/1O/w1cDnyilFU=";//copy ข้อความ Channel access token ตอนที่ตั้งค่า
+   $content = file_get_contents('php://input');
+   $arrayJson = json_decode($content, true);
+   $arrayHeader = array();
+   $arrayHeader[] = "Content-Type: application/json";
+   $arrayHeader[] = "Authorization: Bearer {$accessToken}";
+   //รับข้อความจากผู้ใช้
+   $message = $arrayJson['events'][0]['message']['text'];
+   //รับ id ของผู้ใช้
+   $id = $arrayJson['events'][0]['source']['userId'];
+   if($message == "นับ 1-10"){
+       for($i=1;$i<=10;$i++){
+          $arrayPostData['to'] = $id;
+          $arrayPostData['messages'][0]['type'] = "text";
+          $arrayPostData['messages'][0]['text'] = $i;
+          pushMsg($arrayHeader,$arrayPostData);
+       }
+    }
+   function pushMsg($arrayHeader,$arrayPostData){
+      $strUrl = "https://api.line.me/v2/bot/message/push";
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL,$strUrl);
+      curl_setopt($ch, CURLOPT_HEADER, false);
+      curl_setopt($ch, CURLOPT_POST, true);
+      curl_setopt($ch, CURLOPT_HTTPHEADER, $arrayHeader);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrayPostData));
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+      $result = curl_exec($ch);
+      curl_close ($ch);
+   }
+   exit;
 ?>
