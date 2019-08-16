@@ -118,21 +118,21 @@ $js_ST = [
                                     "contents" => [
                                         [
                                             "type" => "text",
-                                            "text" => $st_Voltage . "V",
+                                            "text" => $st_Voltage."V",
                                             "size" => "lg",
                                             "weight" => "bold",
                                             "color" => "#E67E22"
                                         ],
                                         [
                                             "type" => "text",
-                                            "text" => $st_living_temp,
+                                            "text" => $st_living_temp."°C",
                                             "size" => "lg",
                                             "weight" => "bold",
                                             "color" => "#3867D6"
                                         ],
                                         [
                                             "type" => "text",
-                                            "text" => $st_living_humi,
+                                            "text" => $st_living_humi."%",
                                             "size" => "lg",
                                             "weight" => "bold",
                                             "color" => "#3867D6"
@@ -505,14 +505,14 @@ $js_CP = [
                                         ],
                                         [
                                             "type" => "text",
-                                            "text" => $st_living_temp,
+                                            "text" => $st_living_temp."°C",
                                             "size" => "lg",
                                             "weight" => "bold",
                                             "color" => "#3867D6"
                                         ],
                                         [
                                             "type" => "text",
-                                            "text" => $st_living_humi,
+                                            "text" => $st_living_humi."%",
                                             "size" => "lg",
                                             "weight" => "bold",
                                             "color" => "#3867D6"
