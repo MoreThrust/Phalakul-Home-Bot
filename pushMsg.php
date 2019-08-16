@@ -48,7 +48,7 @@ if ($st_Voltage == '234') {
        'replyToken' => $kooID,
        'messages' => [$jsonFlex]
    ];
-   pushMsg($arrayHeader, $post_body);
+   pushMsg2($arrayHeader, $post_body);
    $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
    $send_result = send_reply_message($API_URL . '/reply', $POST_HEADER, $post_body);
 }
@@ -64,6 +64,21 @@ function send_reply_message($url, $post_header, $post_body)
    $result = curl_exec($ch);
    curl_close($ch);
    return $result;
+}
+
+function pushMsg2($arrayHeader, $post_body)
+{
+   $strUrl = "https://api.line.me/v2/bot/message/push";
+   $ch = curl_init();
+   curl_setopt($ch, CURLOPT_URL, $strUrl);
+   curl_setopt($ch, CURLOPT_HEADER, false);
+   curl_setopt($ch, CURLOPT_POST, true);
+   curl_setopt($ch, CURLOPT_HTTPHEADER, $arrayHeader);
+   //curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrayPostData));
+   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+   $result = curl_exec($ch);
+   curl_close($ch);
 }
 
 function pushMsg($arrayHeader, $arrayPostData)
