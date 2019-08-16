@@ -40,10 +40,6 @@ if ($st_Voltage == "232") {
 }
 
 if ($st_Voltage >= "234") {
-   foreach ($request_array['events'] as $event) {
-      //$reply_message = '';
-      //$reply_token = $event['replyToken'];
-      //$text = $event['message']['text'];
       $data = [
          'replyToken' => $reply_token,
          'messages' => ["ดูเหมือนว่าระดับแรงดันไฟจะเกิน 234 | แรงดันที่วัดได้ = ".$st_Voltage]
@@ -51,7 +47,8 @@ if ($st_Voltage >= "234") {
       $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
       $send_result = send_reply_message($API_URL . '/reply', $POST_HEADER, $post_body);
       echo "Result: " . $send_result . "\r\n";
-   }
+      pushMsg($POST_HEADER, $post_body);
+   
 }
 
 
