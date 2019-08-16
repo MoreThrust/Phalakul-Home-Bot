@@ -7,38 +7,11 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
-//========================================== Push message ==========================================//
-$arrayHeader = array();
-$arrayHeader[] = "Content-Type: application/json";
-$arrayHeader[] = "Authorization: Bearer {$ACCESS_TOKEN}";
-//========================================== End Push message ==========================================//
-/*
-$kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
-if ($st_Voltage > "230") {
-    $arrayPostData['to'] = $kooID;
-    $arrayPostData['messages'][0]['type'] = "text";
-    $arrayPostData['messages'][0]['text'] = "ดูเหมือนว่าระดับแรงดันไฟจะเกิน 230 | แรงดันที่วัดได้ = +" . st_Voltage;
-    pushMsg($arrayHeader, $arrayPostData);
-}
-*/
 if (sizeof($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
         $reply_message = '';
         $reply_token = $event['replyToken'];
         $text = $event['message']['text'];
-
-        //========================================== Push message ==========================================//
-        $kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
-        //$message = $request_array['events'][0]['message']['text'];
-        //$id = $request_array['events'][0]['source']['userId'];
-        /*if ($st_Voltage > "230") {
-            $arrayPostData['to'] = $kooID;
-            $arrayPostData['messages'][0]['type'] = "text";
-            $arrayPostData['messages'][0]['text'] = "ดูเหมือนว่าระดับแรงดันไฟจะเกิน 230 | แรงดันที่วัดได้ = +" . st_Voltage;
-            pushMsg($arrayHeader, $arrayPostData);
-        }*/
-        //========================================== End Push message ==========================================//
-
 
         //========================================== แสงสว่าง ==========================================//
         if ($text == 'แสงสว่าง') { }
