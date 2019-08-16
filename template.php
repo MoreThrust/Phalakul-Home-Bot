@@ -18,7 +18,7 @@ $js_wr_login = [
           "text" => "ดูภาพปัจจุบัน"
         ]
       ],
-      "thumbnailImageUrl" => 'https://scontent.fkkc2-1.fna.fbcdn.net/v/t45.1600-4/cp0/q90/spS444/c0.0.284.159a/p160x160/67400655_23843631237530674_8647782389818327040_n.png.jpg?_nc_cat=1&_nc_oc=AQkYHrwzEpe_U2oT0Q2ttfUmfmqsrmdgjsUu65BmHpZ-tpMERe186hPh9TbuaIRdbxM&_nc_ht=scontent.fkkc2-1.fna&oh=48c07f506e4e456d833a7693550a1cf4&oe=5DD3C6EF',
+      "thumbnailImageUrl" => 'http://scontent.fkkc2-1.fna.fbcdn.net/v/t45.1600-4/cp0/q90/spS444/c0.0.284.159a/p160x160/67400655_23843631237530674_8647782389818327040_n.png.jpg?_nc_cat=1&_nc_oc=AQkYHrwzEpe_U2oT0Q2ttfUmfmqsrmdgjsUu65BmHpZ-tpMERe186hPh9TbuaIRdbxM&_nc_ht=scontent.fkkc2-1.fna&oh=48c07f506e4e456d833a7693550a1cf4&oe=5DD3C6EF',
       "title" => "แจ้งเตือน!!",
       "text" => "คุณ \$name ได้ปลดล็อคประตูบ้าน \n$dt"
     ]
