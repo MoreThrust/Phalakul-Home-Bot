@@ -13,6 +13,14 @@ $arrayHeader[] = "Content-Type: application/json";
 $arrayHeader[] = "Authorization: Bearer {$ACCESS_TOKEN}";
 //========================================== End Push message ==========================================//
 
+$kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
+if ($st_Voltage > "230") {
+    $arrayPostData['to'] = $kooID;
+    $arrayPostData['messages'][0]['type'] = "text";
+    $arrayPostData['messages'][0]['text'] = "ดูเหมือนว่าระดับแรงดันไฟจะเกิน 230 | แรงดันที่วัดได้ = +" . st_Voltage;
+    pushMsg($arrayHeader, $arrayPostData);
+}
+
 if (sizeof($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
         $reply_message = '';
@@ -23,19 +31,17 @@ if (sizeof($request_array['events']) > 0) {
         $kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
         //$message = $request_array['events'][0]['message']['text'];
         //$id = $request_array['events'][0]['source']['userId'];
-        if($st_Voltage > "230"){
+        if ($st_Voltage > "230") {
             $arrayPostData['to'] = $kooID;
             $arrayPostData['messages'][0]['type'] = "text";
-            $arrayPostData['messages'][0]['text'] = "ดูเหมือนว่าระดับแรงดันไฟจะเกิน 230 | แรงดันที่วัดได้ = +".st_Voltage;
-            pushMsg($arrayHeader,$arrayPostData);
-         }
+            $arrayPostData['messages'][0]['text'] = "ดูเหมือนว่าระดับแรงดันไฟจะเกิน 230 | แรงดันที่วัดได้ = +" . st_Voltage;
+            pushMsg($arrayHeader, $arrayPostData);
+        }
         //========================================== End Push message ==========================================//
 
 
         //========================================== แสงสว่าง ==========================================//
-        if ($text == 'แสงสว่าง') { 
-            
-        }
+        if ($text == 'แสงสว่าง') { }
         //========================================== จบ แสงสว่าง ==========================================//
 
         if ($text == 'แอร์') { }
@@ -72,7 +78,7 @@ if (sizeof($request_array['events']) > 0) {
             ));
             $resp = curl_exec($curl);
             curl_close($curl);
-        }elseif($text == 'ปลดล็อกประตู'){
+        } elseif ($text == 'ปลดล็อกประตู') {
             $curl = curl_init();
             curl_setopt_array($curl, array(
                 CURLOPT_RETURNTRANSFER => 1,
@@ -93,7 +99,7 @@ if (sizeof($request_array['events']) > 0) {
     }
 }
 
-echo "Last update 12/8/2562";
+echo "ok";
 function send_reply_message($url, $post_header, $post_body)
 {
     $ch = curl_init($url);
@@ -107,16 +113,17 @@ function send_reply_message($url, $post_header, $post_body)
     return $result;
 }
 
-function pushMsg($arrayHeader,$arrayPostData){
+function pushMsg($arrayHeader, $arrayPostData)
+{
     $strUrl = "https://api.line.me/v2/bot/message/push";
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL,$strUrl);
+    curl_setopt($ch, CURLOPT_URL, $strUrl);
     curl_setopt($ch, CURLOPT_HEADER, false);
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $arrayHeader);
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrayPostData));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     $result = curl_exec($ch);
-    curl_close ($ch);
- }
+    curl_close($ch);
+}
