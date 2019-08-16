@@ -8,7 +8,7 @@ echo $dt;
 
 $js_wr_login = [
     "type" => "template",
-    "altText" => "this is a buttons template",
+    "altText" => "แจ้งเตือน!!!",
     "template" => [
       "type" => "buttons",
       "actions" => [
