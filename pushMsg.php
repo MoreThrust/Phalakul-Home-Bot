@@ -34,7 +34,7 @@ if ($st_Voltage = "230") {
 if ($st_Voltage = "232") {
    $arrayPostData['to'] = $kooID;
    $arrayPostData['messages'][0]['type'] = "text";
-   $arrayPostData['messages'][0]['text'] = "ดูเหมือนว่าระดับแรงดันไฟจะเกิน 230 | แรงดันที่วัดได้ = ".$st_Voltage;
+   $arrayPostData['messages'][0]['text'] = "ดูเหมือนว่าระดับแรงดันไฟจะเกิน 232 | แรงดันที่วัดได้ = ".$st_Voltage;
    $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
    pushMsg($POST_HEADER, $post_body);
 }
@@ -46,7 +46,7 @@ if ($st_Voltage > "234") {
       //$text = $event['message']['text'];
       $data = [
          'replyToken' => $reply_token,
-         'messages' => ["ดูเหมือนว่าระดับแรงดันไฟจะเกิน 230 | แรงดันที่วัดได้ = ".$st_Voltage]
+         'messages' => ["ดูเหมือนว่าระดับแรงดันไฟจะเกิน 234 | แรงดันที่วัดได้ = ".$st_Voltage]
       ];
       $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
       $send_result = send_reply_message($API_URL . '/reply', $POST_HEADER, $post_body);
