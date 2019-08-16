@@ -48,7 +48,9 @@ if ($st_Voltage == '234') {
        'replyToken' => $kooID,
        'messages' => [$jsonFlex]
    ];
-   pushMsg($arrayHeader, $arrayPostData);
+   pushMsg($arrayHeader, $post_body);
+   $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
+   $send_result = send_reply_message($API_URL . '/reply', $POST_HEADER, $post_body);
 }
 
 function send_reply_message($url, $post_header, $post_body)
