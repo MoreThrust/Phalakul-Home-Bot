@@ -7,9 +7,11 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
+//========================================== Push message ==========================================//
 $arrayHeader = array();
 $arrayHeader[] = "Content-Type: application/json";
 $arrayHeader[] = "Authorization: Bearer {$ACCESS_TOKEN}";
+//========================================== End Push message ==========================================//
 
 if (sizeof($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
@@ -17,21 +19,25 @@ if (sizeof($request_array['events']) > 0) {
         $reply_token = $event['replyToken'];
         $text = $event['message']['text'];
 
-        //========================================== แสงสว่าง ==========================================//
+        //========================================== Push message ==========================================//
         $message = $request_array['events'][0]['message']['text'];
         $id = $request_array['events'][0]['source']['userId'];
         if($message == "นับ 1-10"){
             for($i=1;$i<=10;$i++){
                $arrayPostData['to'] = $id;
                $arrayPostData['messages'][0]['type'] = "text";
-               $arrayPostData['messages'][0]['text'] = $i;
+               $arrayPostData['messages'][0]['text'] = $id;
                pushMsg($arrayHeader,$arrayPostData);
             }
          }
+        //========================================== End Push message ==========================================//
 
+
+        //========================================== แสงสว่าง ==========================================//
         if ($text == 'แสงสว่าง') { 
             
         }
+        //========================================== จบ แสงสว่าง ==========================================//
 
         if ($text == 'แอร์') { }
 
