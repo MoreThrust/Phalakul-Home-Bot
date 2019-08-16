@@ -12,7 +12,7 @@ $arrayHeader = array();
 $arrayHeader[] = "Content-Type: application/json";
 $arrayHeader[] = "Authorization: Bearer {$ACCESS_TOKEN}";
 //========================================== End Push message ==========================================//
-
+/*
 $kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
 if ($st_Voltage > "230") {
     $arrayPostData['to'] = $kooID;
@@ -20,7 +20,7 @@ if ($st_Voltage > "230") {
     $arrayPostData['messages'][0]['text'] = "ดูเหมือนว่าระดับแรงดันไฟจะเกิน 230 | แรงดันที่วัดได้ = +" . st_Voltage;
     pushMsg($arrayHeader, $arrayPostData);
 }
-
+*/
 if (sizeof($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
         $reply_message = '';
