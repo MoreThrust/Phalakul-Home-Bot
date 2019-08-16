@@ -95,7 +95,7 @@ $js_ST = [
                                     "contents" => [
                                         [
                                             "type" => "text",
-                                            "text" => $st_Voltage,
+                                            "text" => $st_Voltage."V",
                                             "size" => "lg",
                                             "weight" => "bold",
                                             "color" => "#E67E22"

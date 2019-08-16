@@ -20,15 +20,14 @@ if (sizeof($request_array['events']) > 0) {
         $text = $event['message']['text'];
 
         //========================================== Push message ==========================================//
-        $message = $request_array['events'][0]['message']['text'];
-        $id = $request_array['events'][0]['source']['userId'];
-        if($message == "นับ 1-10"){
-            for($i=1;$i<=10;$i++){
-               $arrayPostData['to'] = $id;
-               $arrayPostData['messages'][0]['type'] = "text";
-               $arrayPostData['messages'][0]['text'] = $id;
-               pushMsg($arrayHeader,$arrayPostData);
-            }
+        $kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
+        //$message = $request_array['events'][0]['message']['text'];
+        //$id = $request_array['events'][0]['source']['userId'];
+        if($st_Voltage > "230"){
+            $arrayPostData['to'] = $kooID;
+            $arrayPostData['messages'][0]['type'] = "text";
+            $arrayPostData['messages'][0]['text'] = "ดูเหมือนว่าระดับแรงดันไฟจะเกิน 230 | แรงดันที่วัดได้ = +".st_Voltage;
+            pushMsg($arrayHeader,$arrayPostData);
          }
         //========================================== End Push message ==========================================//
 
