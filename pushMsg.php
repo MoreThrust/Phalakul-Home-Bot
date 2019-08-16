@@ -1,7 +1,7 @@
 <html>
 
 <head>
-   <META HTTP-EQUIV="Refresh" CONTENT="5;URL=https://www.thaicreate.com.com">
+   <META HTTP-EQUIV="Refresh" CONTENT="5;URL=https://rhas.herokuapp.com/pushMsg.php">
 </head>
 
 <body></body>
@@ -41,9 +41,9 @@ if ($st_Voltage = "232") {
 
 if ($st_Voltage > "234") {
    foreach ($request_array['events'] as $event) {
-      $reply_message = '';
-      $reply_token = $event['replyToken'];
-      $text = $event['message']['text'];
+      //$reply_message = '';
+      //$reply_token = $event['replyToken'];
+      //$text = $event['message']['text'];
       $data = [
          'replyToken' => $reply_token,
          'messages' => ["ดูเหมือนว่าระดับแรงดันไฟจะเกิน 230 | แรงดันที่วัดได้ = +".$st_Voltage]
