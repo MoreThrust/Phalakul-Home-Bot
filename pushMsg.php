@@ -26,10 +26,6 @@ $arrayHeader[] = "Authorization: Bearer {$ACCESS_TOKEN}";
 
 $kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
 
-$command= "/sbin/iwlist wlan0 scan | grep 'ESSID'  ";
-    $localSSID = exec ($command);
-    echo $localSSID;
-
 if($st_Voltage == '234') {
    $data = [
        'to' => $kooID,
