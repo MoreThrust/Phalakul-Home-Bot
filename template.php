@@ -18,7 +18,7 @@ $js_wr_login = [
           "text" => "ดูภาพปัจจุบัน"
         ]
       ],
-      "thumbnailImageUrl" => 'https://mokmoon.com/images/LINEDevelopers.png',
+      "thumbnailImageUrl" => 'https://192.168.1.48:5001/fbdownload/2019073109070902.jpg?_sid=%2233KyurSNI9MOw1920PCN106103%22&mode=open&dlink=%222f43414d2f55444f4e5f43414d2f32303139303733312f323031393037333130393037303930322e6a7067%22&stdhtml=true&SynoToken=Z34HvUUxUiE5I',
       "title" => "แจ้งเตือน!!",
       "text" => "คุณ \$name ได้ปลดล็อคประตูบ้าน \n$dt"
     ]
