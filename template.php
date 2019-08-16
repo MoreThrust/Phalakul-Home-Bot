@@ -18,7 +18,7 @@ $js_wr_login = [
           "text" => "ดูภาพปัจจุบัน"
         ]
       ],
-      "thumbnailImageUrl" => 'http://tv.bectero.com/wp-content/uploads/2018/11/Pg5vQj0D_400x400.jpg',
+      "thumbnailImageUrl" => 'https://d.line-scdn.net/stf/line-lp/1200x630.png',
       "title" => "แจ้งเตือน!!",
       "text" => "คุณ \$name ได้ปลดล็อคประตูบ้าน \n$dt"
     ]
