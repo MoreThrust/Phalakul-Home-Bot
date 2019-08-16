@@ -8,18 +8,19 @@ echo $dt;
 
 $js_wr_login = [
     "type" => "template",
-    "altText" => "แจ้งเตือน!!!",
+    "altText" => "this is a buttons template",
     "template" => [
-        "type" => "buttons",
-        "actions" => [
-            [
-                "type" => "message",
-                "label" => "ดูภาพ",
-                "text" => "การดำเนินการ 1"
-            ]
-        ],
-        "title" => "แจ้งเตือน!!",
-        "text" => "คุณ name ได้ปลดล็อคบ้าน"
+      "type" => "buttons",
+      "actions" => [
+        [
+          "type" => "message",
+          "label" => "ดูภาพปัจจุบัน",
+          "text" => "ดูภาพปัจจุบัน"
+        ]
+      ],
+      "thumbnailImageUrl" => "http://192.168.1.48 =>5000/fbdownload/2019073109070902.jpg?_sid=\"33KyurSNI9MOw1920PCN106103\"&mode=open&dlink=\"2f43414d2f55444f4e5f43414d2f32303139303733312f323031393037333130393037303930322e6a7067\"&stdhtml=true&SynoToken=Z34HvUUxUiE5I",
+      "title" => "แจ้งเตือน!!",
+      "text" => "คุณ $name ได้ปลดล็อคประตูบ้าน"
     ]
 ];
 
