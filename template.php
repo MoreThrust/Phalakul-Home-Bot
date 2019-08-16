@@ -18,7 +18,7 @@ $js_wr_login = [
           "text" => "ดูภาพปัจจุบัน"
         ]
       ],
-      "thumbnailImageUrl" => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyt3SDd7nWRPL7Tzc-jQvOpgKkezrmaCMOVm5jUWZajp-f6omreA',
+      "thumbnailImageUrl" => 'http://tv.bectero.com/wp-content/uploads/2018/11/Pg5vQj0D_400x400.jpg',
       "title" => "แจ้งเตือน!!",
       "text" => "คุณ \$name ได้ปลดล็อคประตูบ้าน \n$dt"
     ]
