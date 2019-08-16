@@ -27,8 +27,8 @@ $js_wr_login = [
 // TEST
 $jsonFlex = [
     "type" => "image",
-  "originalContentUrl" => "http://tv.bectero.com/wp-content/uploads/2018/11/Pg5vQj0D_400x400.jpg",
-  "previewImageUrl" => "http://tv.bectero.com/wp-content/uploads/2018/11/Pg5vQj0D_400x400.jpg",
+  "originalContentUrl" => "https://d.line-scdn.net/stf/line-lp/1200x630.png",
+  "previewImageUrl" => "https://d.line-scdn.net/stf/line-lp/1200x630.png",
   "animated" => true
 ];
 
