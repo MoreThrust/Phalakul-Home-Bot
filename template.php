@@ -18,7 +18,7 @@ $js_wr_login = [
           "text" => "ดูภาพปัจจุบัน"
         ]
       ],
-      "thumbnailImageUrl" => 'https://raw.githubusercontent.com/MoreThrust/R.H.A.S-Project/master/ptest.jpg?token=AFM7QYEKS5SXWPM6Q7Q3KA25K2XK2',
+      "thumbnailImageUrl" => 'https://raw.githubusercontent.com/MoreThrust/SMART-OFFICE-LINE-BOT-MTLAB/master/ptest.jpg',
       "title" => "แจ้งเตือน!!",
       "text" => "คุณ \$name ได้ปลดล็อคประตูบ้าน \n$dt"
     ]
