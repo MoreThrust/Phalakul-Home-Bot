@@ -1,3 +1,4 @@
+<!--
 <html>
 
 <head>
@@ -6,7 +7,7 @@
 
 <body></body>
 
-</html>
+</html> -->
 <?php
 include("template.php");
 include("Status.php");
