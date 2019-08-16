@@ -18,7 +18,7 @@ $js_wr_login = [
           "text" => "ดูภาพปัจจุบัน"
         ]
       ],
-      "thumbnailImageUrl" => 'https://d.line-scdn.net/stf/line-lp/1200x630.png',
+      "thumbnailImageUrl" => 'https://115.87.177.18:5001/fbdownload/2019073109070902.jpg?_sid=%22RujYcAvIeJSDM1920PCN106103%22&mode=open&dlink=%222f43414d2f55444f4e5f43414d2f32303139303733312f323031393037333130393037303930322e6a7067%22&stdhtml=true&SynoToken=iuUg09fgnzWsg',
       "title" => "แจ้งเตือน!!",
       "text" => "คุณ \$name ได้ปลดล็อคประตูบ้าน \n$dt"
     ]
