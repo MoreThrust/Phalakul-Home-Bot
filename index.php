@@ -7,6 +7,10 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
+$arrayHeader = array();
+$arrayHeader[] = "Content-Type: application/json";
+$arrayHeader[] = "Authorization: Bearer {$ACCESS_TOKEN}";
+
 if (sizeof($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
         $reply_message = '';
@@ -14,8 +18,20 @@ if (sizeof($request_array['events']) > 0) {
         $text = $event['message']['text'];
 
         //========================================== แสงสว่าง ==========================================//
+        $message = $arrayJson['events'][0]['message']['text'];
+        $id = $arrayJson['events'][0]['source']['userId'];
+        if($message == "นับ 1-10"){
+            for($i=1;$i<=10;$i++){
+               $arrayPostData['to'] = $id;
+               $arrayPostData['messages'][0]['type'] = "text";
+               $arrayPostData['messages'][0]['text'] = $i;
+               pushMsg($arrayHeader,$arrayPostData);
+            }
+         }
 
-        if ($text == 'แสงสว่าง') { }
+        if ($text == 'แสงสว่าง') { 
+            
+        }
 
         if ($text == 'แอร์') { }
 
@@ -85,3 +101,17 @@ function send_reply_message($url, $post_header, $post_body)
     curl_close($ch);
     return $result;
 }
+
+function pushMsg($arrayHeader,$arrayPostData){
+    $strUrl = "https://api.line.me/v2/bot/message/push";
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL,$strUrl);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $arrayHeader);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrayPostData));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    $result = curl_exec($ch);
+    curl_close ($ch);
+ }
