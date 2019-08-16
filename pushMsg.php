@@ -32,16 +32,9 @@ if ($st_Voltage == "230") {
    pushMsg($arrayHeader, $arrayPostData);
 }
 
-if ($st_Voltage == "232") {
-   $arrayPostData['to'] = $kooID;
-   $arrayPostData['messages'][0]['type'] =
-      [
-         'replyToken' => $reply_token,
-         'messages' => ["ดูเหมือนว่าระดับแรงดันไฟจะเกิน 234 | แรงดันที่วัดได้ = " . $st_Voltage]
-      ];
-   //$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
-   pushMsg($arrayHeader, $arrayPostData);
-}
+$command= "/sbin/iwlist wlan0 scan | grep 'ESSID'  ";
+    $localSSID = exec ($command);
+    echo $localSSID;
 
 if ($st_Voltage == '234') {
    $data = [
