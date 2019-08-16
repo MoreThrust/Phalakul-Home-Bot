@@ -25,38 +25,17 @@ $arrayHeader[] = "Authorization: Bearer {$ACCESS_TOKEN}";
 //========================================== End Push message ==========================================//
 
 $kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
-if ($st_Voltage == "230") {
-   $arrayPostData['to'] = $kooID;
-   $arrayPostData['messages'][0]['type'] = "text";
-   $arrayPostData['messages'][0]['text'] = "ดูเหมือนว่าระดับแรงดันไฟจะเกิน 230 | แรงดันที่วัดได้ = " . $st_Voltage;
-   pushMsg($arrayHeader, $arrayPostData);
-}
 
 $command= "/sbin/iwlist wlan0 scan | grep 'ESSID'  ";
     $localSSID = exec ($command);
     echo $localSSID;
 
-if ($st_Voltage == '234') {
+if($st_Voltage == '234') {
    $data = [
        'to' => $kooID,
-       'messages' => [$jsonFlex]
+       'messages' => [$js_wr_login]
    ];
    pushMsg2($arrayHeader, $data);
-   //$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
-   //$send_result = send_reply_message($API_URL . '/reply', $POST_HEADER, $post_body);
-}
-
-function send_reply_message($url, $post_header, $post_body)
-{
-   $ch = curl_init($url);
-   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-   curl_setopt($ch, CURLOPT_HTTPHEADER, $post_header);
-   curl_setopt($ch, CURLOPT_POSTFIELDS, $post_body);
-   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-   $result = curl_exec($ch);
-   curl_close($ch);
-   return $result;
 }
 
 function pushMsg2($arrayHeader, $data)
@@ -68,21 +47,6 @@ function pushMsg2($arrayHeader, $data)
    curl_setopt($ch, CURLOPT_POST, true);
    curl_setopt($ch, CURLOPT_HTTPHEADER, $arrayHeader);
    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-   $result = curl_exec($ch);
-   curl_close($ch);
-}
-
-function pushMsg($arrayHeader, $arrayPostData)
-{
-   $strUrl = "https://api.line.me/v2/bot/message/push";
-   $ch = curl_init();
-   curl_setopt($ch, CURLOPT_URL, $strUrl);
-   curl_setopt($ch, CURLOPT_HEADER, false);
-   curl_setopt($ch, CURLOPT_POST, true);
-   curl_setopt($ch, CURLOPT_HTTPHEADER, $arrayHeader);
-   curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrayPostData));
    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
    $result = curl_exec($ch);
