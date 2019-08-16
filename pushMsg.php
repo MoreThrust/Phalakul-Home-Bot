@@ -23,14 +23,14 @@ $arrayHeader[] = "Authorization: Bearer {$ACCESS_TOKEN}";
 //========================================== End Push message ==========================================//
 
 $kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
-if ($st_Voltage > "230") {
+if ($st_Voltage = "230") {
    $arrayPostData['to'] = $kooID;
    $arrayPostData['messages'][0]['type'] = "text";
    $arrayPostData['messages'][0]['text'] = "ดูเหมือนว่าระดับแรงดันไฟจะเกิน 230 | แรงดันที่วัดได้ = +".$st_Voltage;
    pushMsg($arrayHeader, $arrayPostData);
 }
 
-if ($st_Voltage > "232") {
+if ($st_Voltage = "232") {
    $arrayPostData['to'] = $kooID;
    $arrayPostData['messages'][0]['type'] = "text";
    $arrayPostData['messages'][0]['text'] = "ดูเหมือนว่าระดับแรงดันไฟจะเกิน 230 | แรงดันที่วัดได้ = +".$st_Voltage;
