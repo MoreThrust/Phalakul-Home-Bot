@@ -2,7 +2,7 @@
 
 // define some variables
 $local_file = '/CAM/UDON_CAM/20140808/2014080801150401.jpg';
-$server_file = 'ftp://cam@192.168.1.48:224';
+$server_file = 'ftp://cam:more160340@192.168.1.48:224';
 
 // set up basic connection
 $conn_id = ftp_connect($ftp_server);
