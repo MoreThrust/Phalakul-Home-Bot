@@ -1,3 +1,6 @@
+<html>
+    <body><a src="ftp_get_image.php" /></body>
+</html>
 <?php
 include("template.php");
 $API_URL = 'https://api.line.me/v2/bot/message';
