@@ -1,12 +1,26 @@
-<?
+<?php
+$content = '';
+$ftp_server = "192.168.1.48:224";
+$ftp_user = "cam";
+$ftp_pass = "more";
+$file_name = "/CAM/UDON_CAM/20140808/2014080801150401.jpg";
+$conn_id = ftp_connect($ftp_server) or die("Couldn't connect to $ftp_server"); 
 
-header('Content-Type: image/jpeg');
+if (@ftp_login($conn_id, $ftp_user, $ftp_pass)) {
+    $content .= "<br />Connected as $ftp_user@$ftp_server\n";
+} else {
+    $content .= "<br />Couldn't connect as $ftp_user\n";
+}
 
-//echo file_get_contents('ftp://username:password@ftp.example.com/path/image.jpg');
-echo file_get_contents('ftp://cam@192.168.1.48:224/CAM/UDON_CAM/20140808/2014080801150401.jpg');
+$files = ftp_nlist($conn_id, $dir);
+foreach($files as $file_name)
+{
+    $content.=  '
+         <div>
+            <a href="ftp://'.$ftp_server.'/'.$file_name.'">
+            <img src="ftp://'.$ftp_server.'/'.$file_name.'"    width="150" height="150">
+           </a>
+         </div>';
+}
 //ftp://cam@192.168.1.48:224/CAM/UDON_CAM/20140808/2014080801150401.jpg
 ?>
-<a src="image.php" /><br>
-<img src='ftp://cam:more160340@192.168.1.48:224/CAM/UDON_CAM/20140808/2014080801150401.jpg' alt='my picture'>
-
-
