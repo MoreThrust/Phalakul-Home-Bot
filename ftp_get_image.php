@@ -1,5 +1,5 @@
 <?php
-
+echo "start";
 $ftpHost   = '192.168.1.48:224';
 $ftpUsername = 'cam';
 $ftpPassword = 'more160340';
