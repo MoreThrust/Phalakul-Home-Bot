@@ -18,7 +18,8 @@ $js_wr_login = [
           "text" => "ดูภาพปัจจุบัน"
         ]
       ],
-      "thumbnailImageUrl" => 'https://raw.githubusercontent.com/MoreThrust/SMART-OFFICE-LINE-BOT-MTLAB/master/ptest.jpg',
+      //"thumbnailImageUrl" => 'https://raw.githubusercontent.com/MoreThrust/SMART-OFFICE-LINE-BOT-MTLAB/master/ptest.jpg',
+      "thumbnailImageUrl" => "https://morethrust.sg7.quickconnect.to/fbdownload/2019073109070902.jpg?_sid=%22d3uw2s1I0sQZc1920PCN106103%22&mode=open&dlink=%222f43414d2f55444f4e5f43414d2f32303139303733312f323031393037333130393037303930322e6a7067%22&stdhtml=true&SynoToken=D3Ep0CmfIAwSQ",
       "title" => "แจ้งเตือน!!",
       "text" => "คุณ \$name ได้ปลดล็อคประตูบ้าน \n$dt"
     ]
