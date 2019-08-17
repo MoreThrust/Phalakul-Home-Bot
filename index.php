@@ -1,5 +1,5 @@
 <html>
-    <body><a src="ftp_get_image.php" /></body>
+    <body>123321<a src="ftp_get_image.php"></a></body>
 </html>
 <?php
 include("template.php");
