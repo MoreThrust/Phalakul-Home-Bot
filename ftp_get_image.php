@@ -1,17 +1,8 @@
 <?php
-echo "v6";
 
-$conn = ftp_connect("ftp://morethrust.synology.me:224") or die("Could not connect");
-$res = ftp_login($conn,"cam","more160340");
+//https://192.168.1.48:5001/fbdownload/2019073109070902.jpg?_sid=%22WzL43u4dQRf3A1920PCN106103%22&mode=open&dlink=%222f43414d2f55444f4e5f43414d2f32303139303733312f323031393037333130393037303930322e6a7067%22&stdhtml=true&SynoToken=czLiQqqmEZT02
+//https://192.168.1.48:5001/fbdownload/2014082321302202.jpg?_sid=%22WzL43u4dQRf3A1920PCN106103%22&mode=open&dlink=%222f43414d2f55444f4e5f43414d2f32303134303832332f323031343038323332313330323230322e6a7067%22&stdhtml=true&SynoToken=czLiQqqmEZT02
 
-if($res)
-{
-    echo "Success FTP is Connecting";
-}
-else
-{
-    echo "FTP don't connect";
-}
 
 /*
 // FTP server details
@@ -41,7 +32,7 @@ ftp_close($connId);
 <html>
     <head></head>
     <body>123321
-        <img src="http://cam:more160340@morethrust.synology.me:224/CAM/UDON_CAM/20140810/2014081021083801.jpg"/>
+        <img src="https://192.168.1.48:5001/fbdownload/2014082321302202.jpg?_sid=%22WzL43u4dQRf3A1920PCN106103%22&mode=open&dlink=%222f43414d2f55444f4e5f43414d2f32303134303832332f323031343038323332313330323230322e6a7067%22&stdhtml=true&SynoToken=czLiQqqmEZT02"/>
         
     
     </body>
