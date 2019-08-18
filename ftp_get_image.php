@@ -35,7 +35,7 @@ $st_cam = "https://192.168.1.48:5001/fbdownload/".$st_Voltage.".jpg?_sid=%22WzL4
 <html>
     <head></head>
     <body>
-        <img src=""$st_cam""/>
+        <img src="<?php echo $st_cam; ?>"/>
         
     
 
