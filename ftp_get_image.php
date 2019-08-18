@@ -1,5 +1,5 @@
 <?php
-
+echo "v2";
 // FTP server details
 $ftpHost   = 'morethrust.synology.me:224';
 $ftpUsername = 'cam';
@@ -22,7 +22,7 @@ ftp_close($connId);
 //ftp://115.87.177.18:224/CAM/UDON_CAM/
 
 ?>
-
+<!--
 <html>
     <head></head>
     <body>123321
@@ -30,4 +30,5 @@ ftp_close($connId);
         
     
     </body>
-</html>
+</html> 
+-->
