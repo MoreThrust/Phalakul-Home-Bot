@@ -1,5 +1,5 @@
 <?php
-echo "v4";
+echo "v5";
 
 $conn = ftp_connect("ftp://morethrust.synology.me:224") or die("Could not connect");
 $res = ftp_login($conn,"cam","more160340");
@@ -37,7 +37,7 @@ ftp_close($connId);
 //ftp://115.87.177.18:224/CAM/UDON_CAM/
 
 ?>
-<!--
+
 <html>
     <head></head>
     <body>123321
@@ -46,4 +46,3 @@ ftp_close($connId);
     
     </body>
 </html> 
--->
