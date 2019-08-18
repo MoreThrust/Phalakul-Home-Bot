@@ -1,5 +1,5 @@
 <?php
-echo "v5";
+echo "v6";
 
 $conn = ftp_connect("ftp://morethrust.synology.me:224") or die("Could not connect");
 $res = ftp_login($conn,"cam","more160340");
@@ -41,7 +41,7 @@ ftp_close($connId);
 <html>
     <head></head>
     <body>123321
-        <img src="ftp://cam:more160340@morethrust.synology.me:224/CAM/UDON_CAM/20140810/2014081021083801.jpg"/>
+        <img src="http://cam:more160340@morethrust.synology.me:224/CAM/UDON_CAM/20140810/2014081021083801.jpg"/>
         
     
     </body>
