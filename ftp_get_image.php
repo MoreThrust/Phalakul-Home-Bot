@@ -1,7 +1,7 @@
 <?php
 echo "v4";
 
-$conn = ftp_connect("115.87.177.18") or die("Could not connect");
+$conn = ftp_connect("localhost:21") or die("Could not connect");
 $res = ftp_login($conn,"cam","more160340");
 
 if($res)
