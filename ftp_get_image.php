@@ -10,7 +10,12 @@ $password= "more160340";
 
 $login= ftp_login($connect, $user, $password) or die ("Login was unsuccessful");
 
+$filesdirectory= ftp_nlist($connect, "/CAM/UDON_CAM/20140808");
 
+foreach ($filesdirectory as $file)
+{
+echo "$file <br/>";
+}
 
 
 //ftp://cam@192.168.1.48:224/CAM/UDON_CAM/20140808/2014080801150401.jpg
