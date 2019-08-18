@@ -1,7 +1,7 @@
 <?php
-echo "v2";
+echo "v3";
 // FTP server details
-$ftpHost   = 'morethrust.synology.me:224';
+$ftpHost   = 'morethrust.synology.me';
 $ftpUsername = 'cam';
 $ftpPassword = 'more160340';
 
