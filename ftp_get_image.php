@@ -1,7 +1,7 @@
 <?php
 echo "v3";
 
-$conn = ftp_connect("morethrust.synology.me") or die("Could not connect");
+$conn = ftp_connect("127.0.0.1") or die("Could not connect");
 $res = ftp_login($conn,"cam","more160340");
 
 if($res)
