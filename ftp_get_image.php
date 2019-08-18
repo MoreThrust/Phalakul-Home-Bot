@@ -2,15 +2,13 @@
 echo "v1";
 
 
-$connect= ftp_connect("morethrust.synology.me:224")
-or die ("Connection to server unsuccessful");
+$connect= ftp_connect("morethrust.synology.me:224") or die ("Connection to server unsuccessful");
 
 $user= "cam";
 
 $password= "more160340";
 
-$login= ftp_login($connect, $user, $password) 
-or die ("Login was unsuccessful");
+$login= ftp_login($connect, $user, $password) or die ("Login was unsuccessful");
 
 
 
