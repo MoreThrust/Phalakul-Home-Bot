@@ -31,7 +31,7 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'วิธีใช้') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [$jsonFlex]
+                'messages' => [$event]
             ];
         }
 
