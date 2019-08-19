@@ -31,7 +31,7 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'วิธีใช้') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [['type' => 'text', 'text' => $getUid]]
+                'messages' => [['type' => 'text', 'text' => 'ID ของคุณคือ/n'.$getUid]]
                 //'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]
             ];
         }
