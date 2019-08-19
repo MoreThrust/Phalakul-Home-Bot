@@ -24,14 +24,14 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'สถานะ') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]
+                'messages' => [$js_ST]
             ];
         }
 
         if ($text == 'วิธีใช้') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [$event]
+                'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]
             ];
         }
 
