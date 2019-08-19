@@ -24,7 +24,7 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'สถานะ') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [$js_ST]
+                'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]
             ];
         }
 
