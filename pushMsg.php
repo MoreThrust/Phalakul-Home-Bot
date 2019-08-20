@@ -7,13 +7,7 @@ $channelSecret = 'af6aadbace7145526e4d024d7b605bb5';
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
-/*
-//========================================== Push message ==========================================//
-$arrayHeader = array();
-$arrayHeader[] = "Content-Type: application/json";
-$arrayHeader[] = "Authorization: Bearer {$ACCESS_TOKEN}";
-//========================================== End Push message ==========================================//
-*/
+
 $kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
 
 if($st_Voltage == '234') {
