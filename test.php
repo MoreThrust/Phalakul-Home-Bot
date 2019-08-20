@@ -8,7 +8,7 @@
    //รับข้อความจากผู้ใช้
    $message = $arrayJson['events'][0]['message']['text'];
    //รับ id ของผู้ใช้
-   $id = $arrayJson['events'][0]['source']['userId'];
+   $id = "Ue124de79c1d8b06ae61ce5bf1039f52f";
 
        for($i=1;$i<=10;$i++){
           $arrayPostData['to'] = $id;
