@@ -25,7 +25,7 @@ int count_stable = 0;
 
 class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
     void onResult(BLEAdvertisedDevice advertisedDevice) {
-      Serial.printf("Found device: %s \n", advertisedDevice.toString().c_str());
+      //Serial.printf("Found device: %s \n", advertisedDevice.toString().c_str());
     }
 };
 
