@@ -18,7 +18,7 @@ $js_wr_login = [
           "text" => "ดูภาพปัจจุบัน"
         ]
       ],
-      "thumbnailImageUrl" => 'https://raw.githubusercontent.com/MoreThrust/SMART-OFFICE-LINE-BOT-MTLAB/master/ptest.jpg',
+      "thumbnailImageUrl" => 'https://aps1-relay.tplinkcloud.com:10443/relayservice?deviceid=FFFF75707EBCECB835B0F6875F0C15FA00001564&type=video&resolution=VGA&X-token=481273c0-C3UfdxiSk1aSgBgWcwPaJXp',
       "title" => "แจ้งเตือน!!",
       "text" => "คุณ \$name ได้ปลดล็อคประตูบ้าน \n$dt"
     ]
