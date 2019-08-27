@@ -20,18 +20,6 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'แอร์') { }
 
         if ($text == 'ประตู') { }
-        if ($text == 'ล็อกประตู') { 
-            $data = [
-                'replyToken' => $reply_token,
-                'messages' => [['type' => 'text', 'text' => 'กำลังล็อกประตู']]
-            ];
-        }
-        if ($text == 'ปลดล็อกประตู') { 
-            $data = [
-                'replyToken' => $reply_token,
-                'messages' => [['type' => 'text', 'text' => 'กำลังปลดล็อกประตู']]
-            ];
-        }
 
         if ($text == 'สถานะ') {
             $data = [
@@ -56,6 +44,10 @@ if (sizeof($request_array['events']) > 0) {
         }
 
         if ($text == 'ล็อกประตู') {
+            $data = [
+                'replyToken' => $reply_token,
+                'messages' => [['type' => 'text', 'text' => 'กำลังล็อกประตู']]
+            ];
             $curl = curl_init();
             curl_setopt_array($curl, array(
                 CURLOPT_RETURNTRANSFER => 1,
@@ -65,6 +57,10 @@ if (sizeof($request_array['events']) > 0) {
             $resp = curl_exec($curl);
             curl_close($curl);
         } elseif ($text == 'ปลดล็อกประตู') {
+            $data = [
+                'replyToken' => $reply_token,
+                'messages' => [['type' => 'text', 'text' => 'กำลังปลดล็อกประตู']]
+            ];
             $curl = curl_init();
             curl_setopt_array($curl, array(
                 CURLOPT_RETURNTRANSFER => 1,
