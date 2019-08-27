@@ -20,6 +20,18 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'แอร์') { }
 
         if ($text == 'ประตู') { }
+        if ($text == 'ล็อกประตู') { 
+            $data = [
+                'replyToken' => $reply_token,
+                'messages' => [['type' => 'text', 'text' => 'กำลังล็อกประตู']]
+            ];
+        }
+        if ($text == 'ปลดล็อกประตู') { 
+            $data = [
+                'replyToken' => $reply_token,
+                'messages' => [['type' => 'text', 'text' => 'กำลังปลดล็อกประตู']]
+            ];
+        }
 
         if ($text == 'สถานะ') {
             $data = [
