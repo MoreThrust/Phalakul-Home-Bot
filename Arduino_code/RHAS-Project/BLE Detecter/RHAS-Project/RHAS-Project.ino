@@ -81,7 +81,7 @@ void loop() {
       if(count_stable == 30){ // set limit to reset counter
         count_stable =0;
       }
-      //Serial.println(count_stable);
+      Serial.println(count_stable);
       if(count_stable == 5){ //set quantity of scan cycle for accept missing Mi Band
       digitalWrite(LED_ONBOARD, LOW); 
         Serial.println("Not Found");
