@@ -1,16 +1,14 @@
+int incomingByte = 0;
 
-void setup()
-{
-    Serial.begin(115200);
+void setup() {
+    Serial.begin(9600);
+    Serial.println("Hello ,type something");
 }
 
-void loop()
-{
-    while(Serial.available())
-    {
-        String Ex_String_Read = Serial.readString();
-
-        Serial.print("Ex_String_Read = ");
-        Serial.println(Ex_String_Read);
-    }
+void loop() {
+     if (Serial.available() > 0) {
+         incomingByte = Serial.read();
+         Serial.print ("> ");
+         Serial.println (incomingByte);
+     }
 }
