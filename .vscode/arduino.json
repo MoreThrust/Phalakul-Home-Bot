@@ -1,6 +1,13 @@
 {
+<<<<<<< HEAD
     "board": "esp32:esp32:heltec_wifi_lora_32",
     "configuration": "PSRAM=disabled,PartitionScheme=default,CPUFreq=240,FlashMode=qio,FlashFreq=40,FlashSize=4M,UploadSpeed=921600,DebugLevel=none",
     "port": "COM3",
     "sketch": "Arduino_code\\RHAS-Project\\BLE Detecter\\RHAS-Project.ino"
+=======
+    "board": "esp8266:esp8266:d1_mini",
+    "configuration": "CpuFrequency=80,UploadSpeed=921600,FlashSize=4M3M",
+    "port": "COM4",
+    "sketch": "Arduino_code\\RHAS-Project\\Main\\Main.ino"
+>>>>>>> 3879000823b49d08a1a2e762aec14bbffea5e3df
 }
