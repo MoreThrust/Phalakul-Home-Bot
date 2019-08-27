@@ -6,9 +6,13 @@ void setup() {
 }
 
 void loop() {
-     if (Serial.available() > 0) {
-         incomingByte = Serial.read();
-         Serial.print ("> ");
-         Serial.println (incomingByte);
-     }
+     if (Serial.available() > 0)     {
+          incomingByte = Serial.read();
+          Serial.print ("> ");
+          Serial.println (incomingByte,BYTE);
+
+          if (incomingByte == 'N') {
+              Serial.println("OK");
+          }
+    }
 }
