@@ -69,11 +69,11 @@ void loop() {
 
       if (deviceAddress == "ee:e9:9f:1d:25:2b" && deviceRSSI > -60){
         digitalWrite(LED_ONBOARD, HIGH); // Turn on LED
-        Serial.println("ON");
+        Serial.println("1111");
       }
       else{
         digitalWrite(LED_ONBOARD, LOW); // Turn off LED
-        Serial.println("OFF");
+        Serial.println("0000");
       }
       //---------------------------------------------------------Check if not found Mi Band-------------------------------------
     }else if(i == count-1 && check == false){
