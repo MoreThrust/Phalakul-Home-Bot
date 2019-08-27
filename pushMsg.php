@@ -10,7 +10,7 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 
 $kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
 
-if($st_door == '0') {
+if($st_door == 'ยังไม่ได้ล็อก') {
    $data = [
        'to' => $kooID,
        'messages' => [$js_wr_login]
