@@ -32,7 +32,7 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("BLEDevice init...");
+  //Serial.println("BLEDevice init...");
 
   pinMode(LED_ONBOARD, OUTPUT);
   digitalWrite(LED_ONBOARD, LOW);
@@ -64,8 +64,8 @@ void loop() {
       deviceAddress = d.getAddress().toString().c_str();
       deviceRSSI = d.getRSSI();
 
-      sprintf(deviceBuffer, "Name: %s| Address: %s| RSSI: %d\n", deviceName.c_str(), deviceAddress.c_str(), deviceRSSI);
-      Serial.print(deviceBuffer);
+      //sprintf(deviceBuffer, "Name: %s| Address: %s| RSSI: %d\n", deviceName.c_str(), deviceAddress.c_str(), deviceRSSI);
+      //Serial.print(deviceBuffer);
 
       if (deviceAddress == "ee:e9:9f:1d:25:2b" && deviceRSSI > -60){
         digitalWrite(LED_ONBOARD, HIGH); // Turn on LED
