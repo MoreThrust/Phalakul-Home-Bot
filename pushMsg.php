@@ -15,17 +15,16 @@ if($st_door == '0') {
        'to' => $kooID,
        'messages' => [$js_wr_login]
    ];
+   pushMsg2($POST_HEADER, $data);
 
    $curl = curl_init();
             curl_setopt_array($curl, array(
                 CURLOPT_RETURNTRANSFER => 1,
-                CURLOPT_URL => 'https://api.anto.io/channel/set/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/Door/0',
+                CURLOPT_URL => 'https://api.anto.io/channel/set/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/Door/1',
                 CURLOPT_USERAGENT => 'Codular Sample cURL Request'
             ));
    $resp = curl_exec($curl);
    curl_close($curl);
-
-   pushMsg2($POST_HEADER, $data);
 }
 
 function pushMsg2($POST_HEADER, $data)
