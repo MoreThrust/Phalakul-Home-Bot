@@ -10,29 +10,12 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 
 $kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
 
-if($st_door == 'ยังไม่ได้ล็อก' and $st_BLE_ID == 'KOO') {
+if($st_door == 'ยังไม่ได้ล็อก') {
    $data = [
        'to' => $kooID,
        'messages' => [$js_wr_login]
    ];
    pushMsg2($POST_HEADER, $data);
-   sleep(5);
-   $curl = curl_init();
-            curl_setopt_array($curl, array(
-                CURLOPT_RETURNTRANSFER => 1,
-                CURLOPT_URL => 'https://api.anto.io/channel/set/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/Door/1',
-                CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-            ));
-   $resp = curl_exec($curl);
-   curl_close($curl);
-   $curl = curl_init();
-            curl_setopt_array($curl, array(
-                CURLOPT_RETURNTRANSFER => 1,
-                CURLOPT_URL => 'https://api.anto.io/channel/set/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/BLE_ID/0',
-                CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-            ));
-   $resp = curl_exec($curl);
-   curl_close($curl);
 }
 
 function pushMsg2($POST_HEADER, $data)
