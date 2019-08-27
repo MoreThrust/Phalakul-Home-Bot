@@ -18,7 +18,7 @@ $js_wr_login = [
           "text" => "ดูภาพปัจจุบัน"
         ]
       ],
-      "thumbnailImageUrl" => 'https://aps1-relay.tplinkcloud.com:10443/relayservice?deviceid=FFFF75707EBCECB835B0F6875F0C15FA00001564&type=video&resolution=VGA&X-token=481273c0-C3UfdxiSk1aSgBgWcwPaJXp',
+      "thumbnailImageUrl" => 'http://tv.bectero.com/wp-content/uploads/2018/11/Pg5vQj0D_400x400.jpg',
       "title" => "แจ้งเตือน!!",
       "text" => "คุณ \$name ได้ปลดล็อคประตูบ้าน \n$dt"
     ]
