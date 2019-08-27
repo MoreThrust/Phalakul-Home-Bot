@@ -1,18 +1,5 @@
-#include <AntoIO.h>
-#define LED 17
-
-const char *ssid = "MT_2.4G";
-const char *pass = "facebook";
-const char *user = "MoreThrust";
-const char *token = "DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4";
-const char *thing = "R_H_A_S";
-
-AntoIO anto(user, token, thing);
-
-//==========================================================================//
-
-//#include <Arduino.h>
-//#include <sstream>
+#include <Arduino.h>
+#include <sstream>
 
 #include <BLEDevice.h>
 #include <BLEUtils.h>
@@ -42,23 +29,15 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
     }
 };
 
-//==========================================================================//
 
 void setup() {
-  pinMode(LED, OUTPUT);
-
   Serial.begin(115200);
-  Serial.print("\nTrying to connect ");
-  Serial.print(ssid);
-  Serial.println("...");
+  Serial.println("BLEDevice init...");
 
-  while (!anto.wifi.begin(ssid, pass));
-  Serial.println("\nConnected, trying to connect to broker...");
+  pinMode(LED_ONBOARD, OUTPUT);
+  digitalWrite(LED_ONBOARD, LOW);
 
-  while (!anto.mqtt.connect(user, token, true));
-  Serial.println("\nConnected");
-
-  anto.mqtt.sub("Door");
+  
 
   BLEDevice::init("");
   pBLEScan = BLEDevice::getScan();
@@ -66,13 +45,9 @@ void setup() {
   pBLEScan->setActiveScan(true); //active scan uses more power, but get results faster
   pBLEScan->setInterval(INTERVAL_TIME); // Set the interval to scan (mSecs)
   pBLEScan->setWindow(WINDOW_TIME);  // less or equal setInterval value
-  
 }
 
 void loop() {
-  anto.mqtt.loop();
-  delay(10);
-
   BLEScanResults foundDevices = pBLEScan->start(SCAN_TIME);
 
   int count = foundDevices.getCount();
@@ -80,7 +55,7 @@ void loop() {
   {
     BLEAdvertisedDevice d = foundDevices.getDevice(i);
 
-    if (d.getName() == "MS1020") {
+    if (d.getName() == "Y 7") {
       check = true;
       count_stable =0;
        
@@ -92,13 +67,11 @@ void loop() {
       sprintf(deviceBuffer, "Name: %s| Address: %s| RSSI: %d\n", deviceName.c_str(), deviceAddress.c_str(), deviceRSSI);
       Serial.print(deviceBuffer);
 
-      if (deviceAddress == "a4:c1:ba:fa:88:ad" && deviceRSSI > -70)
-      {
-        digitalWrite(LED_ONBOARD, HIGH);
-        anto.mqtt.pub("Door","0");
+      if (deviceAddress == "ee:e9:9f:1d:25:2b" && deviceRSSI > -60){
+        digitalWrite(LED_ONBOARD, HIGH); // Turn on LED
+        Serial.println("ON");
       }
-      else
-      {
+      else{
         digitalWrite(LED_ONBOARD, LOW); // Turn off LED
         Serial.println("OFF");
       }
@@ -118,20 +91,4 @@ void loop() {
       //---------------------------------------------------------------------------------------------------------------------------
   }
   pBLEScan->clearResults();
-}
-
-void messageReceived(String topic, String payload, char * bytes, unsigned int length) {
-  Serial.print("incoming: ");
-  Serial.print(topic);
-  Serial.print(" - ");
-  Serial.print(payload);
-  Serial.println();
-
-  if (payload.toInt() == 1) {
-    digitalWrite(LED, HIGH);
-    Serial.println("HIGH");
-  } else {
-    digitalWrite(LED, LOW);
-    Serial.println("LOW");
-  }
 }
