@@ -16,7 +16,7 @@ if($st_door == 'ยังไม่ได้ล็อก' and $st_BLE_ID == 'KOO'
        'messages' => [$js_wr_login]
    ];
    pushMsg2($POST_HEADER, $data);
-
+   sleep(5);
    $curl = curl_init();
             curl_setopt_array($curl, array(
                 CURLOPT_RETURNTRANSFER => 1,
