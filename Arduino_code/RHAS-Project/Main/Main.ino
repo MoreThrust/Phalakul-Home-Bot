@@ -9,7 +9,7 @@ void loop() {
      if (Serial.available() > 0)     {
           incomingByte = Serial.read();
           Serial.print ("> ");
-          Serial.println (incomingByte,BYTE);
+          Serial.println (incomingByte);
 
           if (incomingByte == 'N') {
               Serial.println("OK");
