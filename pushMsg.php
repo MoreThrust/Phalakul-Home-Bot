@@ -25,6 +25,14 @@ if($st_door == 'ยังไม่ได้ล็อก' and $st_BLE_ID == 'KOO'
             ));
    $resp = curl_exec($curl);
    curl_close($curl);
+   $curl = curl_init();
+            curl_setopt_array($curl, array(
+                CURLOPT_RETURNTRANSFER => 1,
+                CURLOPT_URL => 'https://api.anto.io/channel/set/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/BLE_ID/0',
+                CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+            ));
+   $resp = curl_exec($curl);
+   curl_close($curl);
 }
 
 function pushMsg2($POST_HEADER, $data)
