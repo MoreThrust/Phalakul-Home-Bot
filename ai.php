@@ -1,8 +1,8 @@
 <?php
-echo "update 3";
+echo "update 4";
 $curl = curl_init();
-$img_file = ("http://static.weloveshopping.com/shop/client/000032/weloveplate/carplate001.jpg");
-//$data = array("image" => new CURLFile($img_file, mime_content_type($img_file), basename($img_file)));
+$img_file = ("http://115.87.177.18:1234/replate002.jpg");
+$data = array("image" => new CURLFile($img_file, mime_content_type($img_file), basename($img_file)));
  
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://api.aiforthai.in.th/lpr",
@@ -12,7 +12,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => $img_file,
+  CURLOPT_POSTFIELDS => $data,
   CURLOPT_HTTPHEADER => array(
     "Content-Type: multipart/form-data",
     "apikey: MWj32O4MsQUohPtEbTSqGcPr9UPX1B6I"
