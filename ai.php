@@ -1,5 +1,5 @@
 <?php
- 
+echo "update 2";
 $curl = curl_init();
 $img_file = ("http://static.weloveshopping.com/shop/client/000032/weloveplate/replate002.jpg");
 $data = array("image" => new CURLFile($img_file, mime_content_type($img_file), basename($img_file)));
