@@ -1,32 +1,13 @@
 <?php
-echo "update 4";
-$curl = curl_init();
-$img_file = ("http://115.87.177.18:1234/replate002.jpg");
-$data = array("image" => new CURLFile($img_file, mime_content_type($img_file), basename($img_file)));
- 
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.aiforthai.in.th/lpr",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => $data,
-  CURLOPT_HTTPHEADER => array(
-    "Content-Type: multipart/form-data",
-    "apikey: MWj32O4MsQUohPtEbTSqGcPr9UPX1B6I"
-  )
-));
- 
-$response = curl_exec($curl);
-$err = curl_error($curl);
- 
-curl_close($curl);
- 
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-  echo $response;
-}
+date_default_timezone_set(“Asia/Bangkok”);
+$date = date(“Y-m-d”);
+$time = date(“H:i:s”);
+$json = file_get_contents(‘php://input’);
+$request = json_decode($json, true);
+$queryText = $request[“queryResult”][“queryText”];
+$userId = $request[‘originalDetectIntentRequest’][‘payload’][‘data’][‘source’][‘userId’];
+$myfile = fopen(“log$date.txt”, “a”) or die(“Unable to open file!”);
+$log = $date.”-”.$time.”\t”.$userId.”\t”.$queryText.”\n”;
+fwrite($myfile,$log);
+fclose($myfile);
 ?>
