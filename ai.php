@@ -8,6 +8,7 @@ $queryText = $request["queryResult"]["queryText"];
 $userId = $request['originalDetectIntentRequest']['payload']['data']['source']['userId'];
 $myfile = fopen("log.txt", "a") or die("Unable to open file!");
 $log = $date."-".$time."\t".$userId."\t".$queryText."\n";
+$data_text = $queryText;
 fwrite($myfile,$log);
 fclose($myfile);
 ?>

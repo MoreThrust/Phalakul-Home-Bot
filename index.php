@@ -1,6 +1,7 @@
 <?php
 include("template.php");
-include("log.txt");
+include("ai.php");
+$datat = $data_text;
 $API_URL = 'https://api.line.me/v2/bot/message';
 $ACCESS_TOKEN = '0o0ysAsM9n8ogghDWIpHI7Hes2cIhXyaES1Hu5QA1GoJFpoF3/oR3QHHO8CJ41G1XzU2HLh7fYPXFNfUF5vHnTMHfzvVvV5bmjY8sYQAMEr6dt3JE6A0Oz8Iync6wKjk+VO3OvdvsQSOu6TSu8liQwdB04t89/1O/w1cDnyilFU=';
 $channelSecret = 'af6aadbace7145526e4d024d7b605bb5';
@@ -18,7 +19,7 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'แสงสว่าง') { 
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [include("log.txt")]
+                'messages' => [$datat]
             ];
         }
         //========================================== จบ แสงสว่าง ==========================================//
