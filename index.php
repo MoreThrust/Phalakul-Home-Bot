@@ -39,7 +39,7 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'แผงควบคุม') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [$js_CP]
+                'messages' => [$js_liv]
             ];
         }
 
