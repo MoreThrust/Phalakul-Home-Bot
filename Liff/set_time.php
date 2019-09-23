@@ -100,7 +100,7 @@
         }
     </script>
 
-    <button id="closewindowbutton">Close Window</button>
+    <button id="closewindowbutton">Close</button>
 
 
 
