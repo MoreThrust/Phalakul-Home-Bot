@@ -33,6 +33,8 @@
 
                 เวลาที่ตั้ง <?php echo $st_Voltage; ?> น.
 
+                <button type="button" class="btn btn-primary" id="closewindowbutton" >บันทึก</button>
+
             </div>
             <div class="col-sm"></div>
         </div>
