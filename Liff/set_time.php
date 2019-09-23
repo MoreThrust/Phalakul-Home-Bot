@@ -31,7 +31,7 @@
 
                 เวลาเปิดที่ตั้งไว้ <?php  echo $st_ton; ?> น.
 
-                <button type="button" id="closewindowbutton" >บันทึกเวลา</div>
+                <button type="button" id="closewindowbutton" class="btn btn-primary">บันทึกเวลา</div>
 
             </div>
             <div class="col-sm"></div>
