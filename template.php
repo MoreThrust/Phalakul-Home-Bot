@@ -81,11 +81,6 @@ $js_ST = [
                                     "contents" => [
                                         [
                                             "type" => "text",
-                                            "text" => "แรงดันไฟฟ้า",
-                                            "size" => "lg"
-                                        ],
-                                        [
-                                            "type" => "text",
                                             "text" => "อุณหภูมิ",
                                             "size" => "lg"
                                         ],
@@ -116,13 +111,6 @@ $js_ST = [
                                     "layout" => "vertical",
                                     "flex" => 2,
                                     "contents" => [
-                                        [
-                                            "type" => "text",
-                                            "text" => $st_Voltage."V",
-                                            "size" => "lg",
-                                            "weight" => "bold",
-                                            "color" => "#E67E22"
-                                        ],
                                         [
                                             "type" => "text",
                                             "text" => $st_living_temp."°C",
