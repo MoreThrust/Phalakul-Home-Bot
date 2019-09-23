@@ -103,7 +103,7 @@
 <div class="buttongroup">
         <div class="buttonrow">
             <button id="openwindowbutton">Open Window</button>
-            <button id="closewindowbutton">Close Window</button>
+            <button id="closewindowbutton">บันทึก</button>
         </div>
         <div class="buttonrow">
             <button id="getaccesstoken">Get Access Token</button>
