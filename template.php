@@ -305,7 +305,7 @@ $js_liv = [
                             "action" => [
                                 "type" => "uri",
                                 "label" => "ตั้งเวลา",
-                                "uri" => "https://rhas.herokuapp.com/Liff/set_time.php"
+                                "uri" => "line://app/1607001531-7Nx53EX6"
                             ],
                             "color" => "#12A3E7",
                             "margin" => "md",
