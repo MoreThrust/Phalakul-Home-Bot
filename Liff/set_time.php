@@ -59,7 +59,6 @@
                     <td id="roomidfield"></td>
                 </tr>
                 <tr>
-                    <th>context.groupId</th>
                     <td id="groupidfield"></td>
                 </tr>
             </table>
