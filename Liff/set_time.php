@@ -101,9 +101,10 @@
     </script>
 
 <div class="buttongroup">
+<button id="closewindowbutton">บันทึก</button>
         <div class="buttonrow">
             <div id="openwindowbutton"></div>
-            <button id="closewindowbutton">บันทึก</button>
+            
         </div>
         <div class="buttonrow">
             <button id="getaccesstoken">Get Access Token</button>
