@@ -36,21 +36,18 @@
         <button id="closewindowbutton">บันทึก</button>
 
         <div id="liffdata">
-            <table border="1">
+            <table border="0">
+                <tr>
+                    <td id="languagefield"></td>
                 
-                <tr>
                     <td id="viewtypefield"></td>
-                </tr>
-                <tr>
+                
                     <td id="useridfield"></td>
-                </tr>
-                <tr>
+                
                     <td id="utouidfield"></td>
-                </tr>
-                <tr>
+                
                     <td id="roomidfield"></td>
-                </tr>
-                <tr>
+                
                     <td id="groupidfield"></td>
                 </tr>
             </table>
