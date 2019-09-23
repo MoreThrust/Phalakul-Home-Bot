@@ -52,34 +52,6 @@
                 });
             });
 
-            // get access token
-            document.getElementById('getaccesstoken').addEventListener('click', function() {
-                const accessToken = liff.getAccessToken();
-                document.getElementById('accesstokenfield').textContent = accessToken;
-                toggleAccessToken();
-            });
-
-            // get profile call
-            document.getElementById('getprofilebutton').addEventListener('click', function() {
-                liff.getProfile().then(function(profile) {
-                    document.getElementById('useridprofilefield').textContent = profile.userId;
-                    document.getElementById('displaynamefield').textContent = profile.displayName;
-
-                    const profilePictureDiv = document.getElementById('profilepicturediv');
-                    if (profilePictureDiv.firstElementChild) {
-                        profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
-                    }
-                    const img = document.createElement('img');
-                    img.src = profile.pictureUrl;
-                    img.alt = "Profile Picture";
-                    profilePictureDiv.appendChild(img);
-
-                    document.getElementById('statusmessagefield').textContent = profile.statusMessage;
-                    toggleProfileData();
-                }).catch(function(error) {
-                    window.alert("Error getting profile: " + error);
-                });
-            });
         }
 
         function toggleAccessToken() {
@@ -107,9 +79,9 @@
             
         </div>
         <div class="buttonrow">
-            <button id="getaccesstoken">Get Access Token</button>
-            <button id="getprofilebutton">Get Profile</button>
-            <button id="sendmessagebutton">Send Message</button>
+            <div id="getaccesstoken">Get Access Token</>
+            <div id="getprofilebutton">Get Profile</div>
+            <div id="sendmessagebutton">Send Message</div>
         </div>
     </div>
  
@@ -216,7 +188,7 @@
 
 
                 <button id="closewindowbutton">Close</button>
-                <button type="button" id="closewindowbutton" >บันทึกเวลา</button>
+                <button type="button" id="closewindowbutton" >บันทึกเวลา</div>
 
             </div>
             <div class="col-sm"></div>
