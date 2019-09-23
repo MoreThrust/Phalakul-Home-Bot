@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>กรอกเวลาที่ต้องการ</h1>
+    <h1 class="Display-4">กรอกเวลาที่ต้องการ</h1>
 
     <div class="container">
         <div class="row">
@@ -22,7 +22,7 @@
                 <?php $curl = curl_init();
                 curl_setopt_array($curl, array(
                     CURLOPT_RETURNTRANSFER => 1,
-                    CURLOPT_URL => 'https://api.anto.io/channel/get/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/Voltage', CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+                    CURLOPT_URL => 'https://api.anto.io/channel/get/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/living_lamp_time_on', CURLOPT_USERAGENT => 'Codular Sample cURL Request'
                 ));
                 $resp = curl_exec($curl);
                 curl_close($curl);
