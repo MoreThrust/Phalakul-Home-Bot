@@ -292,7 +292,7 @@ $js_status = [
             "action" => [
               "type" => "uri",
               "label" => "ตั้งเวลา",
-              "uri" => "line://app/101"
+              "uri" => "line://app/1607001531-7Nx53EX"
             ],
             "color" => "#12A3E7",
             "margin" => "md",
