@@ -7,7 +7,7 @@ $dt = date('เมื่อวันที่ d/m/Y เวลา H:i:s น.');
 echo $dt;
 
 // สถานะ
-$st_status = [
+$js_status = [
     "type" => "flex",
     "altText" => "Flex Message",
     "contents" => [
