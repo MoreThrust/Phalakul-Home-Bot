@@ -286,7 +286,20 @@ $js_status = [
           ],
           [
             "type" => "separator"
-          ],
+            "margin" => "md"
+        ],
+        [
+          "type" => "box",
+          "layout" => "vertical",
+          "margin" => "md",
+          "contents" => [
+            [
+              "type" => "text",
+              "text" => "ตั้วเวลาการทำงาน",
+              "align" => "start",
+              "gravity" => "center",
+              "weight" => "bold"
+            ],
           [
             "type" => "button",
             "action" => [
