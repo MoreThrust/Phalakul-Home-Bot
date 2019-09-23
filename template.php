@@ -74,31 +74,31 @@ $js_status = [
                     "contents" => [
                       [
                         "type" => "text",
-                        "text" => "29.7°C",
+                        "text" => $st_living_temp."°C",
                         "size" => "lg",
                         "weight" => "bold",
                         "color" => "#3867D6"
                       ],
                       [
                         "type" => "text",
-                        "text" => "45%",
+                        "text" => $st_living_humi."%",
                         "size" => "lg",
                         "weight" => "bold",
                         "color" => "#3867D6"
                       ],
                       [
                         "type" => "text",
-                        "text" => "ไม่มีฝน",
+                        "text" => $st_rain,
                         "size" => "lg",
                         "weight" => "bold",
                         "color" => "#0FB9B1"
                       ],
                       [
                         "type" => "text",
-                        "text" => "ยังไม่ได้ล็อก",
+                        "text" => $st_door,
                         "size" => "lg",
                         "weight" => "bold",
-                        "color" => "#EB3B5A"
+                        "color" => $st_door_c
                       ]
                     ]
                   ]
@@ -143,7 +143,7 @@ $js_status = [
           ],
           [
             "type" => "text",
-            "text" => "เมื่อวันที่ 22/02/62 เวลา 20:30น.",
+            "text" => $dt,
             "margin" => "lg",
             "size" => "xxs",
             "align" => "center",
