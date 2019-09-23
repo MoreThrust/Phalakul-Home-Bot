@@ -46,16 +46,7 @@
             </div>
         </div>
 
-        <div id="accesstokendata">
-            <h2>Access Token</h2>
-            <a href="#" onclick="toggleAccessToken()">Close Access Token</a>
-            <table border="1">
-                <tr>
-                    <th>accessToken</th>
-                    <td id="accesstokenfield"></td>
-                </tr>
-            </table>
-        </div>
+        
 
         <div id="profileinfo">
             <h2>Profile</h2>
