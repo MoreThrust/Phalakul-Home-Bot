@@ -37,9 +37,7 @@
 
         <div id="liffdata">
             <table border="1">
-                <tr>
-                    <td id="languagefield"></td>
-                </tr>
+                
                 <tr>
                     <td id="viewtypefield"></td>
                 </tr>
