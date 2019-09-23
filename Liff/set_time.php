@@ -8,72 +8,9 @@
 </head>
  
 <body>
-    <div class="buttongroup">
-            <button id="openwindowbutton">Open Window</button>
             <button id="closewindowbutton">Close Window</button>
-    </div>
+
  
-    <div id="accesstokendata">
-        <h2>Access Token</h2>
-        <a href="#" onclick="toggleAccessToken()">Close Access Token</a>
-        <table border="1">
-            <tr>
-                <th>accessToken</th>
-                <td id="accesstokenfield"></td>
-            </tr>
-        </table>
-    </div>
- 
-    <div id="profileinfo">
-        <h2>Profile</h2>
-        <a href="#" onclick="toggleProfileData()">Close Profile</a>
-        <div id="profilepicturediv">
-        </div>
-        <table border="1">
-            <tr>
-                <th>userId</th>
-                <td id="useridprofilefield"></td>
-            </tr>
-            <tr>
-                <th>displayName</th>
-                <td id="displaynamefield"></td>
-            </tr>
-            <tr>
-                <th>statusMessage</th>
-                <td id="statusmessagefield"></td>
-            </tr>
-        </table>
-    </div>
- 
-    <div id="liffdata">
-        <h2>LIFF Data</h2>
-        <table border="1">
-            <tr>
-                <th>language</th>
-                <td id="languagefield"></td>
-            </tr>
-            <tr>
-                <th>context.viewType</th>
-                <td id="viewtypefield"></td>
-            </tr>
-            <tr>
-                <th>context.userId</th>
-                <td id="useridfield"></td>
-            </tr>
-            <tr>
-                <th>context.utouId</th>
-                <td id="utouidfield"></td>
-            </tr>
-            <tr>
-                <th>context.roomId</th>
-                <td id="roomidfield"></td>
-            </tr>
-            <tr>
-                <th>context.groupId</th>
-                <td id="groupidfield"></td>
-            </tr>
-        </table>
-    </div>
      
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script src="liff-starter.js"></script>
@@ -98,7 +35,7 @@
             <div class="col-sm"></div>
             <div class="col-sm">
 
-                <?php $curl = curl_init();
+                <?php /* $curl = curl_init();
                 curl_setopt_array($curl, array(
                     CURLOPT_RETURNTRANSFER => 1,
                     CURLOPT_URL => 'https://api.anto.io/channel/get/DL32Cs80BDqJwgimtX5oBIDTMOlAt8VUBPGElAA4/R_H_A_S/living_lamp_time_on', CURLOPT_USERAGENT => 'Codular Sample cURL Request'
@@ -110,7 +47,7 @@
 
                 ?>
 
-                เวลาเปิดที่ตั้งไว้ <?php echo $st_ton; ?> น.
+                เวลาเปิดที่ตั้งไว้ <?php /* echo $st_ton; ?> น.
 
 
                 <button id="closewindowbutton">Close</button>
