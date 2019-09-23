@@ -32,6 +32,8 @@
 
                 เวลาเปิดที่ตั้งไว้ <?php echo $st_ton; ?> น.
 
+
+                <button id="closewindowbutton">Close Window</button>
                 <button type="button" id="closewindowbutton" >บันทึกเวลา</button>
 
             </div>
