@@ -197,13 +197,13 @@ $js_status = [
                 "contents" => [
                   [
                     "type" => "text",
-                    "text" => "30.1°C",
+                    "text" => $st_living_temp."°C",
                     "size" => "lg",
                     "weight" => "bold"
                   ],
                   [
                     "type" => "text",
-                    "text" => "24%",
+                    "text" => $st_living_humi."%",
                     "size" => "lg",
                     "weight" => "bold"
                   ]
