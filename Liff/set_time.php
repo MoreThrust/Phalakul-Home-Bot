@@ -35,19 +35,6 @@
     <div class="buttongroup">
         <button id="closewindowbutton">บันทึก</button>
 
-      
-        <div class="buttonrow">
-            <div id="getaccesstoken">
-                </>
-                <div id="getprofilebutton"></div>
-                <div id="sendmessagebutton"></div>
-            </div>
-        </div>
-
-        
-
-       
-
         <div id="liffdata">
             <h2>LIFF Data</h2>
             <table border="1">
