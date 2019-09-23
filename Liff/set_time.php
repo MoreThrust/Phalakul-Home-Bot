@@ -24,32 +24,9 @@
             document.getElementById('roomidfield').textContent = data.context.roomId;
             document.getElementById('groupidfield').textContent = data.context.groupId;
 
-            // openWindow call
-            document.getElementById('openwindowbutton').addEventListener('click', function() {
-                liff.openWindow({
-                    url: 'https://line.me'
-                });
-            });
-
             // closeWindow call
             document.getElementById('closewindowbutton').addEventListener('click', function() {
                 liff.closeWindow();
-            });
-
-            // sendMessages call
-            document.getElementById('sendmessagebutton').addEventListener('click', function() {
-                liff.sendMessages([{
-                    type: 'text',
-                    text: "You've successfully sent a message! Hooray!"
-                }, {
-                    type: 'sticker',
-                    packageId: '2',
-                    stickerId: '144'
-                }]).then(function() {
-                    window.alert("Message sent");
-                }).catch(function(error) {
-                    window.alert("Error sending message: " + error);
-                });
             });
 
         }
@@ -72,85 +49,86 @@
         }
     </script>
 
-<div class="buttongroup">
-<button id="closewindowbutton">บันทึก</button>
+    <div class="buttongroup">
+        <button id="closewindowbutton">บันทึก</button>
+
         <div class="buttonrow">
             <div id="openwindowbutton"></div>
-            
         </div>
         <div class="buttonrow">
-            <div id="getaccesstoken">Get Access Token</>
-            <div id="getprofilebutton">Get Profile</div>
-            <div id="sendmessagebutton">Send Message</div>
+            <div id="getaccesstoken">
+                </>
+                <div id="getprofilebutton"></div>
+                <div id="sendmessagebutton"></div>
+            </div>
         </div>
-    </div>
- 
-    <div id="accesstokendata">
-        <h2>Access Token</h2>
-        <a href="#" onclick="toggleAccessToken()">Close Access Token</a>
-        <table border="1">
-            <tr>
-                <th>accessToken</th>
-                <td id="accesstokenfield"></td>
-            </tr>
-        </table>
-    </div>
- 
-    <div id="profileinfo">
-        <h2>Profile</h2>
-        <a href="#" onclick="toggleProfileData()">Close Profile</a>
-        <div id="profilepicturediv">
+
+        <div id="accesstokendata">
+            <h2>Access Token</h2>
+            <a href="#" onclick="toggleAccessToken()">Close Access Token</a>
+            <table border="1">
+                <tr>
+                    <th>accessToken</th>
+                    <td id="accesstokenfield"></td>
+                </tr>
+            </table>
         </div>
-        <table border="1">
-            <tr>
-                <th>userId</th>
-                <td id="useridprofilefield"></td>
-            </tr>
-            <tr>
-                <th>displayName</th>
-                <td id="displaynamefield"></td>
-            </tr>
-            <tr>
-                <th>statusMessage</th>
-                <td id="statusmessagefield"></td>
-            </tr>
-        </table>
-    </div>
- 
-    <div id="liffdata">
-        <h2>LIFF Data</h2>
-        <table border="1">
-            <tr>
-                <th>language</th>
-                <td id="languagefield"></td>
-            </tr>
-            <tr>
-                <th>context.viewType</th>
-                <td id="viewtypefield"></td>
-            </tr>
-            <tr>
-                <th>context.userId</th>
-                <td id="useridfield"></td>
-            </tr>
-            <tr>
-                <th>context.utouId</th>
-                <td id="utouidfield"></td>
-            </tr>
-            <tr>
-                <th>context.roomId</th>
-                <td id="roomidfield"></td>
-            </tr>
-            <tr>
-                <th>context.groupId</th>
-                <td id="groupidfield"></td>
-            </tr>
-        </table>
-    </div>
+
+        <div id="profileinfo">
+            <h2>Profile</h2>
+            <a href="#" onclick="toggleProfileData()">Close Profile</a>
+            <div id="profilepicturediv">
+            </div>
+            <table border="1">
+                <tr>
+                    <th>userId</th>
+                    <td id="useridprofilefield"></td>
+                </tr>
+                <tr>
+                    <th>displayName</th>
+                    <td id="displaynamefield"></td>
+                </tr>
+                <tr>
+                    <th>statusMessage</th>
+                    <td id="statusmessagefield"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="liffdata">
+            <h2>LIFF Data</h2>
+            <table border="1">
+                <tr>
+                    <th>language</th>
+                    <td id="languagefield"></td>
+                </tr>
+                <tr>
+                    <th>context.viewType</th>
+                    <td id="viewtypefield"></td>
+                </tr>
+                <tr>
+                    <th>context.userId</th>
+                    <td id="useridfield"></td>
+                </tr>
+                <tr>
+                    <th>context.utouId</th>
+                    <td id="utouidfield"></td>
+                </tr>
+                <tr>
+                    <th>context.roomId</th>
+                    <td id="roomidfield"></td>
+                </tr>
+                <tr>
+                    <th>context.groupId</th>
+                    <td id="groupidfield"></td>
+                </tr>
+            </table>
+        </div>
 
 
 
-    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
-    <!--<script src="liff-starter.js"></script>-->
+        <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+        <!--<script src="liff-starter.js"></script>-->
 </body>
 
 <!--
@@ -202,5 +180,6 @@
 </body>-->
 
 </html>
+
 
 
