@@ -17,37 +17,13 @@
         };
 
         function initializeApp(data) {
-            
-            // closeWindow call
             document.getElementById('closewindowbutton').addEventListener('click', function() {
                 liff.closeWindow();
             });
-
         }
     </script>
 
-    <div class="buttongroup">
         <button id="closewindowbutton">บันทึก</button>
-
-        <div id="liffdata">
-            <table border="0">
-                <tr>
-                    <td id="languagefield"></td>
-                
-                    <td id="viewtypefield"></td>
-                
-                    <td id="useridfield"></td>
-                
-                    <td id="utouidfield"></td>
-                
-                    <td id="roomidfield"></td>
-                
-                    <td id="groupidfield"></td>
-                </tr>
-            </table>
-        </div>
-
-
 
         <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
         <!--<script src="liff-starter.js"></script>-->
