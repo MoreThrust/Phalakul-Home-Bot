@@ -18,8 +18,6 @@
             <div class="col-sm"></div>
             <div class="col-sm">
 
-                One of three columns
-
                 <?php $curl = curl_init();
                 curl_setopt_array($curl, array(
                     CURLOPT_RETURNTRANSFER => 1,
@@ -34,7 +32,7 @@
 
                 เวลาที่ตั้ง <?php echo $st_Voltage; ?> น.
 
-                <button type="button" class="btn btn-primary" id="closewindowbutton" >บันทึก</button>
+                <button type="button" class="btn btn-primary" id="closewindowbutton" >บันทึกเวลา</button>
 
             </div>
             <div class="col-sm"></div>
