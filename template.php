@@ -9,7 +9,7 @@ echo $dt;
 // สถานะ
 $js_status = [
     "type" => "flex",
-    "altText" => "Flex Message",
+    "altText" => "คุณเช็คสถานะ",
     "contents" => [
       "type" => "bubble",
       "direction" => "ltr",
@@ -150,7 +150,7 @@ $js_status = [
   // ห้องนั่งเล่น
   $js_liv = [
     "type" => "flex",
-    "altText" => "Flex Message",
+    "altText" => "คุณเปิดห้องนั่งเล่น",
     "contents" => [
       "type" => "bubble",
       "hero" => [
