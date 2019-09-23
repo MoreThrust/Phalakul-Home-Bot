@@ -35,9 +35,7 @@
     <div class="buttongroup">
         <button id="closewindowbutton">บันทึก</button>
 
-        <div class="buttonrow">
-            <div id="openwindowbutton"></div>
-        </div>
+      
         <div class="buttonrow">
             <div id="getaccesstoken">
                 </>
