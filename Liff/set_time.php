@@ -26,13 +26,13 @@
                 $resp = curl_exec($curl);
                 curl_close($curl);
                 $val = explode('"', $resp);
-                $st_Voltage = $val[7]; 
+                $st_ton = $val[7]; 
 
                 ?>
 
-                เวลาที่ตั้ง <?php echo $st_Voltage; ?> น.
+                เวลาเปิดที่ตั้งไว้ <?php echo $st_ton; ?> น.
 
-                <button type="button" class="btn btn-primary" id="closewindowbutton" >บันทึกเวลา</button>
+                <button type="button" id="closewindowbutton" >บันทึกเวลา</button>
 
             </div>
             <div class="col-sm"></div>
