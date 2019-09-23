@@ -102,7 +102,7 @@
 
 <div class="buttongroup">
         <div class="buttonrow">
-           
+            <div id="openwindowbutton"></div>
             <button id="closewindowbutton">บันทึก</button>
         </div>
         <div class="buttonrow">
