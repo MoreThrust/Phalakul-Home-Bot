@@ -375,9 +375,7 @@ $js_liv = [
 
 // Quick Reply
 $js_q_replay = [
-    "to" => "Ue124de79c1d8b06ae61ce5bf1039f52f",
-    "messages" => [
-      [
+      
         "type" => "text",
         "text" => "Hello Quick Reply!",
         "quickReply" => [
@@ -436,6 +434,6 @@ $js_q_replay = [
             ]
           ]
         ]
-      ]
-     ]
+      
+     
   ];
