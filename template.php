@@ -327,7 +327,7 @@ $js_liv = [
                             "action" => [
                                 "type" => "uri",
                                 "label" => "ตั้งเวลา",
-                                "uri" => "https://www.google.co.th/"
+                                "uri" => "line://app/101"
                             ],
                             "color" => "#12A3E7",
                             "margin" => "md",
