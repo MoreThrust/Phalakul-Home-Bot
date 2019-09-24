@@ -18,6 +18,14 @@ if($st_door == 'ยังไม่ได้ล็อก') {
    pushMsg2($POST_HEADER, $data);
 }
 
+if($st_living_humi == '57.3') {
+   $data = [
+       'to' => $kooID,
+       'messages' => [$js_q_replay]
+   ];
+   pushMsg2($POST_HEADER, $data);
+}
+
 function pushMsg2($POST_HEADER, $data)
 {
    $strUrl = "https://api.line.me/v2/bot/message/push";

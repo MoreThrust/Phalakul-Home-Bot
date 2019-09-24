@@ -14,10 +14,7 @@ if (sizeof($request_array['events']) > 0) {
         $text = $event['message']['text'];
         $getUid = $event['source']['userId'];
         //========================================== แสงสว่าง ==========================================//
-        if ($text == 'แสงสว่าง') {
-            $js_q_replay;
-        }
-         }
+        if ($text == 'แสงสว่าง') { }
         //========================================== จบ แสงสว่าง ==========================================//
 
         if ($text == 'แอร์') { 
@@ -86,7 +83,7 @@ if (sizeof($request_array['events']) > 0) {
         $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
         $send_result = send_reply_message($API_URL . '/reply', $POST_HEADER, $post_body);
         echo "Result: " . $send_result . "\r\n";
-    
+    }
 }
 
 echo "ok";
