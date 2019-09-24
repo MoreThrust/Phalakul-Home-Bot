@@ -17,10 +17,15 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'แสงสว่าง') { }
         //========================================== จบ แสงสว่าง ==========================================//
 
-        if ($text == 'แอร์') { }
+        if ($text == 'แอร์') { 
+            $data = [
+                'replyToken' => $reply_token,
+                'messages' => [$js_set_time]
+            ];
+        }
 
         if ($text == 'ประตู') { }
-
+        
         if ($text == 'สถานะ') {
             $data = [
                 'replyToken' => $reply_token,

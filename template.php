@@ -6,6 +6,28 @@ $timeNow = date('H:i');
 $dt = date('เมื่อวันที่ d/m/Y เวลา H:i:s น.');
 echo $dt;
 
+// ตั้งเวลา
+$js_set_time = [
+    "type" => "template",
+    "altText" => "this is a buttons template",
+    "template" => [
+      "type" => "buttons",
+      "actions" => [
+        [
+          "type" => "datetimepicker",
+          "label" => "การดำเนินการ 1",
+          "data" => "ข้อมูล 1",
+          "mode" => "time",
+          "initial" => "12:00",
+          "max" => "23:59",
+          "min" => "00:00"
+        ]
+      ],
+      "title" => "ชื่อ",
+      "text" => "ข้อความ"
+    ]
+  ];
+
 // สถานะ
 $js_status = [
     "type" => "flex",
