@@ -13,11 +13,11 @@ $kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
 if($st_door == 'ยังไม่ได้ล็อก') {
    $data = [
        'to' => $kooID,
-       'messages' => [$js_wr_login]
+       'messages' => [$js_q_replay]
    ];
    pushMsg2($POST_HEADER, $data);
 }
-
+/*
 if($st_living_humi == '57.3') {
    $data = [
        'to' => $kooID,
@@ -25,7 +25,7 @@ if($st_living_humi == '57.3') {
    ];
    pushMsg2($POST_HEADER, $data);
 }
-
+*/
 function pushMsg2($POST_HEADER, $data)
 {
    $strUrl = "https://api.line.me/v2/bot/message/push";
