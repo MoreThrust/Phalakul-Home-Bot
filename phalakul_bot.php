@@ -13,11 +13,12 @@ if (sizeof($request_array['events']) > 0) {
         $reply_token = $event['replyToken'];
         $text = $event['message']['text'];
         $getUid = $event['source']['userId'];
+        $getUgroup = $event['source']['groupId'];
         //========================================== แสงสว่าง ==========================================//
         if ($text == 'Hi') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]
+                'messages' => [['type' => 'text', 'text' => 'ID กลุ่มคือ '.$getUgroup]]
             ];
          }
         //========================================== จบ แสงสว่าง ==========================================//
