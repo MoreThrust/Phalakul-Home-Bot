@@ -4,6 +4,7 @@ date_default_timezone_set('Asia/Bangkok');
 $dateNow = date('Y-m-d');
 $timeNow = date('H:i');
 $dt = date('เมื่อวันที่ d/m/Y เวลา H:i:s น.');
+$tn = date('H:i:s น.');
 echo $dt;
 
 $js_cam = [
@@ -15,11 +16,11 @@ $js_cam = [
       [
         "type" => "uri",
         "label" => "ดูภาพปัจจุบัน",
-        "uri" => "line://app/101"
+        "uri" => "line://app/1627066014-rgwoqVe9"
       ]
     ],
     "title" => "แจ้งเตือน!!",
-    "text" => "พบการเคลื่อนไหว  เมื่อเวลา"
+    "text" => "พบการเคลื่อนไหว  เมื่อเวลา".$tn
   ]
 ];
 
