@@ -14,10 +14,10 @@ if (sizeof($request_array['events']) > 0) {
         $text = $event['message']['text'];
         $getUid = $event['source']['userId'];
         //========================================== แสงสว่าง ==========================================//
-        if ($text == 'แสงสว่าง') {
+        if ($text == 'Hi') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [$js_q_replay]
+                'messages' => ["type" => "text","text" => "สวัสดี"]
             ];
          }
         //========================================== จบ แสงสว่าง ==========================================//
