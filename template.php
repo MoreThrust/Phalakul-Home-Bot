@@ -6,6 +6,23 @@ $timeNow = date('H:i');
 $dt = date('เมื่อวันที่ d/m/Y เวลา H:i:s น.');
 echo $dt;
 
+$js_cam = [
+  "type" => "template",
+  "altText" => "this is a buttons template",
+  "template" => [
+    "type" => "buttons",
+    "actions" => [
+      [
+        "type" => "uri",
+        "label" => "ดูภาพปัจจุบัน",
+        "uri" => "line://app/101"
+      ]
+    ],
+    "title" => "แจ้งเตือน!!",
+    "text" => "พบการเคลื่อนไหว  เมื่อเวลา"
+  ]
+];
+
 // ตั้งเวลา
 $js_set_time = [
     "type" => "template",
