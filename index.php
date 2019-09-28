@@ -1,1 +1,1 @@
-<?php header( 'Location: https://www.google.co.th/' ) ;  ?>
+<?php echo 'Hello' ?>
