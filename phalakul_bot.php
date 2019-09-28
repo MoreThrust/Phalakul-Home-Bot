@@ -17,7 +17,7 @@ if (sizeof($request_array['events']) > 0) {
         if ($text == 'Hi') {
             $data = [
                 'replyToken' => $reply_token,
-                'messages' => [['type' => 'text', 'text' => json_encode($request_array)]]
+                'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]
             ];
          }
         //========================================== จบ แสงสว่าง ==========================================//
