@@ -9,9 +9,10 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
 $kooID = "Ue124de79c1d8b06ae61ce5bf1039f52f";
+$Group = "U25ededce0fb6209d9efa4a85be630e3c";
 
    $data = [
-       'to' => $kooID,
+       'to' => $Group,
        'messages' => [$js_cam]
    ];
    pushMsg2($POST_HEADER, $data);
