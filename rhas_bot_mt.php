@@ -7,14 +7,6 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
-new PostbackTemplateActionBuilder(
-    'Postback', // ข้อความแสดงในปุ่ม
-    http_build_query(array(
-        'action'=>'buy',
-        'item'=>100
-    )) // ข้อมูลที่จะส่งไปใน webhook ผ่าน postback event
-)  ;
-
 if (sizeof($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
         $reply_message = '';
